@@ -11,15 +11,17 @@ from .models import FetchedPage
 
 HEADERS = {
     "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 }
 
 
 async def _fetch_one(client: httpx.AsyncClient, url: str) -> Optional[FetchedPage]:
     try:
-        r = await client.get(url, headers=HEADERS, timeout=15.0,
+        r = await client.get(url, headers=HEADERS,
+                             timeout=httpx.Timeout(connect=5.0, read=10.0,
+                                                   write=5.0, pool=2.0),
                              follow_redirects=True)
         if r.status_code != 200 or not r.text:
             return None
@@ -63,18 +65,23 @@ async def _fetch_many_async(urls: List[str], concurrency: int = 5) -> List[Fetch
             async with sem:
                 return await _fetch_one(client, u)
         results = await asyncio.gather(*[bounded(u) for u in urls],
-                                       return_exceptions=False)
-    return [r for r in results if r is not None]
+                                       return_exceptions=True)
+    return [r for r in results if isinstance(r, FetchedPage)]
 
 
-def fetch_many(urls: List[str], concurrency: int = 5) -> List[FetchedPage]:
+def fetch_many(urls: List[str], concurrency: int = 5,
+               title_lookup: dict = None) -> List[FetchedPage]:
     """Sync wrapper. Streamlit runs in a thread so a fresh loop is fine."""
     try:
-        return asyncio.run(_fetch_many_async(urls, concurrency))
+        pages = asyncio.run(_fetch_many_async(urls, concurrency))
     except RuntimeError:
-        # In case we're already inside a loop (unlikely in Streamlit but safe)
         loop = asyncio.new_event_loop()
         try:
-            return loop.run_until_complete(_fetch_many_async(urls, concurrency))
+            pages = loop.run_until_complete(_fetch_many_async(urls, concurrency))
         finally:
             loop.close()
+    if title_lookup:
+        for p in pages:
+            if not p.title:
+                p.title = title_lookup.get(p.url, p.domain)
+    return pages

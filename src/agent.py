@@ -80,13 +80,8 @@ class DeepResearchAgent:
 
     def fetch(self, results, top_n: int):
         urls = [r.url for r in results[:top_n]]
-        pages = fetch_many(urls, concurrency=5)
-        # backfill titles from search if extractor missed them
         title_lookup = {r.url: r.title for r in results}
-        for p in pages:
-            if not p.title:
-                p.title = title_lookup.get(p.url, p.domain)
-        return pages
+        return fetch_many(urls, concurrency=5, title_lookup=title_lookup)
 
     def build_context(self, query: str, pages):
         all_chunks = chunk_pages(pages)
