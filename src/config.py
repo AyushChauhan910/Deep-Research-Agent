@@ -14,3 +14,6 @@ DEFAULT_MAX_CHUNK_CHARS = 1500
 # Context budget for synthesis
 MAX_CONTEXT_CHARS = 14_000
 SUMMARIZE_THRESHOLD_TOKENS = 2_000
+
+# Iterative refinement: re-search when critic grounding is below this score (1-5)
+REFINE_GROUNDING_THRESHOLD = 3

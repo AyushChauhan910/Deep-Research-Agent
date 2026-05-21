@@ -1,6 +1,7 @@
 """The agent loop. No framework — just Python, a callback for events, and four LLM calls.
 
-Flow: Plan → Search → Fetch → Select Context → Synthesize → Critic → Persist.
+Flow: Plan → Search → Fetch → Select Context → Synthesize → Critic
+      → (Refine if grounding < 3) → Persist.
 """
 import time
 from dataclasses import dataclass, field
@@ -8,7 +9,8 @@ from typing import Callable, Dict, List, Optional
 
 from .config import (
     DEFAULT_MAX_CHUNKS, DEFAULT_MAX_PAGES, DEFAULT_MAX_QUERIES,
-    DEFAULT_RESULTS_PER_QUERY, MAX_CONTEXT_CHARS, SUMMARIZE_THRESHOLD_TOKENS,
+    DEFAULT_RESULTS_PER_QUERY, MAX_CONTEXT_CHARS, REFINE_GROUNDING_THRESHOLD,
+    SUMMARIZE_THRESHOLD_TOKENS,
 )
 from .context import chunk_pages, select_context
 from .fetcher import fetch_many
@@ -191,6 +193,37 @@ class DeepResearchAgent:
         critique = self.critique(query, answer, len(chunks))
         self._emit(on_event, "critic_done", "Quality check complete",
                    {"critique": critique})
+
+        # 6b. ITERATIVE REFINEMENT — one extra pass when grounding is weak
+        if chunks and critique.get("grounding", 5) < REFINE_GROUNDING_THRESHOLD:
+            self._emit(on_event, "refine_start",
+                       f"Grounding {critique.get('grounding')}/5 — searching for better sources…",
+                       {"grounding": critique.get("grounding"),
+                        "issues": critique.get("issues", "")})
+            refine_input = (
+                f"The answer to '{query[:200]}' has weak source grounding. "
+                f"Issue: {critique.get('issues', 'insufficient evidence')}. "
+                f"Generate 1-2 targeted queries to find better supporting evidence."
+            )
+            refined_plan = self.plan(refine_input, answer[:400])
+            seen_urls = {p.url for p in pages}
+            extra_results = [r for r in self.search_all(refined_plan["queries"][:2])
+                             if r.url not in seen_urls]
+            extra_pages = self.fetch(extra_results, top_n=4)
+            if extra_pages:
+                pages = pages + extra_pages
+                chunks = self.build_context(query, pages)
+                # No on_token here: avoids concatenating a second stream onto the first
+                answer = self.synthesize(query, chunks, summary)
+                critique = self.critique(query, answer, len(chunks))
+                self._emit(on_event, "refine_done",
+                           f"Refined with {len(extra_pages)} new pages · "
+                           f"grounding now {critique.get('grounding', '?')}/5",
+                           {"extra_urls": [p.url for p in extra_pages],
+                            "critique": critique})
+            else:
+                self._emit(on_event, "refine_done",
+                           "No new sources found — keeping original answer", {})
 
         # 7. PERSIST
         citations = [

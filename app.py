@@ -129,6 +129,16 @@ if user_query := st.chat_input("Ask a research question…"):
                             f"Completeness {c.get('completeness', '—')}/5 · "
                             f"Conflict {c.get('conflict_handling', '—')}/5"
                         )
+                elif ev.kind == "refine_start":
+                    st.caption(f"⚠️ {ev.data.get('issues', '')}")
+                elif ev.kind == "refine_done":
+                    c = ev.data.get("critique", {})
+                    if c:
+                        st.caption(
+                            f"After refinement — grounding {c.get('grounding', '—')}/5"
+                        )
+                    for u in ev.data.get("extra_urls", []):
+                        st.caption(f"➕ {u}")
 
         def on_token(tok: str):
             acc["text"] += tok
