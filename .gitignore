@@ -1,8 +1,7 @@
-.env
 .venv/
 __pycache__/
 *.pyc
-*.pyo
+.env
 data/
-*.db
-.streamlit/secrets.toml
+eval/results/
+.DS_Store
