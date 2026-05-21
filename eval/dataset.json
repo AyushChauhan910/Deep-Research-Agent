@@ -1,1 +1,81 @@
-[]
+[
+    {
+        "id": "fact-01",
+        "type": "factual",
+        "question": "Who founded Sarvam AI and where is the company headquartered?",
+        "expected_keywords": [
+            "Vivek Raghavan",
+            "Pratyush Kumar",
+            "Bengaluru"
+        ]
+    },
+    {
+        "id": "fact-02",
+        "type": "factual",
+        "question": "When did India's Digital Personal Data Protection Act receive presidential assent?",
+        "expected_keywords": [
+            "2023",
+            "August",
+            "DPDP"
+        ]
+    },
+    {
+        "id": "compare-01",
+        "type": "comparison",
+        "question": "Compare retrieval-augmented generation and fine-tuning for adapting LLMs to private enterprise documents.",
+        "expected_keywords": [
+            "retrieval",
+            "fine-tuning",
+            "latency",
+            "update",
+            "cost"
+        ]
+    },
+    {
+        "id": "compare-02",
+        "type": "comparison",
+        "question": "How do Mistral 7B and Llama 3 8B compare on reasoning benchmarks?",
+        "expected_keywords": [
+            "MMLU",
+            "reasoning",
+            "Mistral",
+            "Llama"
+        ]
+    },
+    {
+        "id": "multihop-01",
+        "type": "multi_hop",
+        "question": "What is Sarvam AI's flagship Indic LLM, and on which open model family is it built?",
+        "expected_keywords": [
+            "OpenHathi",
+            "Sarvam",
+            "Llama"
+        ]
+    },
+    {
+        "id": "recent-01",
+        "type": "recent",
+        "question": "What were the major updates to India's IndiaAI Mission in 2025?",
+        "expected_keywords": [
+            "IndiaAI",
+            "compute",
+            "GPU"
+        ]
+    },
+    {
+        "id": "conflict-01",
+        "type": "potentially_conflicting",
+        "question": "Is GPT-4 or Claude 3.5 Sonnet better for code generation? Cite benchmark numbers.",
+        "expected_keywords": [
+            "HumanEval",
+            "SWE",
+            "benchmark"
+        ]
+    },
+    {
+        "id": "insufficient-01",
+        "type": "insufficient_evidence",
+        "question": "What will the exact market share of Indian LLM startups be in 2030?",
+        "should_express_uncertainty": true
+    }
+]
