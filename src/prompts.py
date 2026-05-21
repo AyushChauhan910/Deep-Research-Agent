@@ -40,6 +40,12 @@ Strict rules:
 say so plainly and suggest what additional research would help.
 5. Do NOT use outside/general knowledge. Stick strictly to the sources.
 6. End your answer with a "Sources" section mapping each [n] to its title and URL.
+7. For questions that compare multiple options ("A vs B", "which is better", "compare X and Y"):
+   do NOT declare an overall winner unless every cited source agrees. Instead, state the
+   specific conditions under which each option is preferable — e.g., "RAG is preferable
+   when data changes frequently [2]; fine-tuning is preferable when latency and stylistic
+   consistency matter [4]". A good comparative answer always answers "better for whom,
+   under what constraints?" and draws on different sources for different criteria.
 
 Begin your answer now."""
 
