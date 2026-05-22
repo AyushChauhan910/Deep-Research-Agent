@@ -14,7 +14,7 @@ from src.search import TavilySearch
 load_dotenv()
 init_db()
 
-st.set_page_config(page_title="Deep Research Agent", layout="wide", page_icon="🔎")
+st.set_page_config(page_title="Deep Research Agent", layout="wide")
 
 
 @st.cache_resource
@@ -33,10 +33,9 @@ def _new_session_cb():
 
 
 with st.sidebar:
-    st.title("🔎 Deep Research")
-    st.caption("Citation-grounded web research, with sessions.")
+    st.title("Deep Research")
 
-    st.button("➕  New session", on_click=_new_session_cb, use_container_width=True)
+    st.button("New session", on_click=_new_session_cb, use_container_width=True)
 
     st.divider()
     st.subheader("Sessions")
@@ -55,7 +54,7 @@ with st.sidebar:
                 st.rerun()
 
     st.divider()
-    with st.expander("⚙️ Settings"):
+    with st.expander("Advanced"):
         k_queries = st.slider("Search queries per question", 1, 6, 4)
         k_fetch = st.slider("Pages to fetch", 3, 12, 8)
         k_chunks = st.slider("Context chunks", 3, 12, 8)
@@ -83,16 +82,16 @@ agent = DeepResearchAgent(
 # -- header ---------------------------------------------------------------
 
 st.markdown("### Deep Research Agent")
-st.caption(f"Session `{sid}`  ·  No agent framework  ·  Tavily + Groq Llama 3.3 70B")
+st.caption(f"Session {sid[:8]}")
 
 # -- empty-state welcome --------------------------------------------------
 
 if not get_messages(sid):
     st.markdown("")
-    st.info(
-        "Ask any research question — I'll plan a strategy, search the "
-        "web, read the top sources, and answer with inline citations. "
-        "Try one of these:"
+    st.caption(
+        "Ask a research question. The agent will plan a strategy, "
+        "search the web, read top sources, and respond with inline "
+        "citations."
     )
     cols = st.columns(3)
     examples = [
@@ -114,8 +113,8 @@ for msg in get_messages(sid):
         st.markdown(msg["content"])
         if msg["role"] == "assistant" and turn_idx < len(past_turns):
             t = past_turns[turn_idx]
-            with st.expander(f"📚 Sources & trace ({len(t['citations'])} sources, "
-                             f"{t.get('elapsed_s', 0):.1f}s)"):
+            with st.expander(f"Sources and trace · {len(t['citations'])} sources · "
+                             f"{t.get('elapsed_s', 0):.1f}s"):
                 for c in t["citations"]:
                     st.markdown(
                         f"**[{c['n']}]** {c['title']} — *{c['domain']}*  \n{c['url']}"
@@ -157,9 +156,9 @@ if user_query:
                         st.caption(f"🔍 `{q}`")
                 elif ev.kind == "search_done":
                     for u in ev.data.get("top_urls", [])[:6]:
-                        st.caption(f"📎 {u}")
+                        st.caption(u)
                 elif ev.kind == "fetch_done":
-                    st.caption(f"✓ {len(ev.data.get('fetched', []))} pages parsed")
+                    st.caption(f"{len(ev.data.get('fetched', []))} pages parsed")
                 elif ev.kind == "critic_done":
                     c = ev.data.get("critique", {})
                     if c:
@@ -169,7 +168,7 @@ if user_query:
                             f"Conflict {c.get('conflict_handling', '—')}/5"
                         )
                 elif ev.kind == "refine_start":
-                    st.caption(f"⚠️ {ev.data.get('issues', '')}")
+                    st.caption(ev.data.get('issues', ''))
                 elif ev.kind == "refine_done":
                     c = ev.data.get("critique", {})
                     if c:
@@ -177,7 +176,7 @@ if user_query:
                             f"After refinement — grounding {c.get('grounding', '—')}/5"
                         )
                     for u in ev.data.get("extra_urls", []):
-                        st.caption(f"➕ {u}")
+                        st.caption(f"Follow-up: {u}")
 
         def on_token(tok: str):
             tokens.append(tok)
@@ -192,7 +191,7 @@ if user_query:
                       f"{result['n_sources']} sources cited",
                 state="complete", expanded=False,
             )
-            with st.expander(f"📚 Sources ({len(result['citations'])})"):
+            with st.expander(f"Sources ({len(result['citations'])})"):
                 for c in result["citations"]:
                     st.markdown(
                         f"**[{c['n']}]** {c['title']} — *{c['domain']}*  \n{c['url']}"

@@ -43,10 +43,7 @@ Strict rules:
 4. If the sources don't contain enough information to answer confidently, \
 say so plainly and suggest what additional research would help.
 5. Do NOT use outside/general knowledge. Stick strictly to the sources.
-6. End your answer with a "Sources" section mapping each [n] to its title and URL. \
-   ONLY include sources you actually cited inline — omit any source that has no [n] \
-   reference in the body of your answer.
-7. ONLY for questions that explicitly compare options ("A vs B", "which is better",
+6. ONLY for questions that explicitly compare options ("A vs B", "which is better",
    "compare X and Y"): do NOT declare a single overall winner. Instead, state the specific
    conditions under which each option is preferable, drawing on different sources for
    different criteria — e.g., "RAG is preferable when data changes frequently [2];
