@@ -133,6 +133,26 @@ class DeepResearchAgent:
                             temperature=0.0, max_tokens=CRITIC_MAX_TOKENS)
         return extract_json(raw) or {}
 
+    def _build_conversation_context(self, session_id: str) -> str:
+        """Combine rolling summary (if any) with the last few raw messages.
+        Called BEFORE add_message(), so the current query is not yet in the list."""
+        summary = get_summary(session_id)
+        messages = get_messages(session_id)
+        if not summary and not messages:
+            return ""
+        parts = []
+        if summary:
+            parts.append(f"Conversation summary so far:\n{summary}")
+        recent = messages[-4:] if len(messages) > 4 else messages
+        if recent:
+            lines = ["Recent exchange:"]
+            for m in recent:
+                role = "User" if m["role"] == "user" else "Assistant"
+                content = m["content"][:600]
+                lines.append(f"{role}: {content}")
+            parts.append("\n".join(lines))
+        return "\n\n".join(parts)
+
     def maybe_update_summary(self, session_id: str):
         """Compress conversation history into a rolling summary when token count exceeds the threshold."""
         msgs = get_messages(session_id)
@@ -176,11 +196,11 @@ class DeepResearchAgent:
             on_event: Optional[Callable] = None,
             on_token: Optional[Callable] = None) -> Dict:
         t0 = time.time()
+        conv_context = self._build_conversation_context(session_id)
         add_message(session_id, "user", query)
-        summary = get_summary(session_id)
 
         self._emit(on_event, "plan_start", "Planning research strategy…")
-        plan = self.plan(query, summary)
+        plan = self.plan(query, conv_context)
         self._emit(on_event, "plan_done",
                    f"Plan ready · {len(plan['queries'])} search queries",
                    {"plan": plan["plan"], "queries": plan["queries"]})
@@ -210,7 +230,7 @@ class DeepResearchAgent:
             answer = ("I couldn't find sufficient web evidence to answer this "
                       "confidently. Try rephrasing or adding context.")
         else:
-            answer = self.synthesize(query, chunks, summary, on_token=on_token)
+            answer = self.synthesize(query, chunks, conv_context, on_token=on_token)
 
         self._emit(on_event, "critic_start", "Self-checking grounding…")
         critique = self.critique(query, answer, len(chunks))
@@ -236,7 +256,7 @@ class DeepResearchAgent:
                 pages = pages + extra_pages
                 chunks = self.build_context(query, pages)
                 # No on_token here: avoids concatenating a second stream onto the first
-                answer = self.synthesize(query, chunks, summary)
+                answer = self.synthesize(query, chunks, conv_context)
                 critique = self.critique(query, answer, len(chunks))
                 self._emit(on_event, "refine_done",
                            f"Refined with {len(extra_pages)} new pages · "
