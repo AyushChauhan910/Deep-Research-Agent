@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 
 from src.agent import DeepResearchAgent, Event
 from src.llm import LLM
-from src.memory import (create_session, get_messages, get_turns, init_db,
-                        list_sessions, rename_session)
+from src.memory import (create_session, delete_session, get_messages,
+                        get_turns, init_db, list_sessions, rename_session)
 from src.search import TavilySearch
 
 load_dotenv()
@@ -28,21 +28,31 @@ llm, search = get_clients()
 
 # -- sidebar --------------------------------------------------------------
 
+def _new_session_cb():
+    st.session_state["session_id"] = create_session()
+
+
 with st.sidebar:
     st.title("🔎 Deep Research")
     st.caption("Citation-grounded web research, with sessions.")
 
-    if st.button("➕  New session", use_container_width=True):
-        st.session_state["session_id"] = create_session()
-        st.rerun()
+    st.button("➕  New session", on_click=_new_session_cb, use_container_width=True)
 
     st.divider()
     st.subheader("Sessions")
-    for s in list_sessions()[:25]:
+    for s in list_sessions(include_empty=False)[:25]:
         label = f"{s['title'][:28]}  ·  {s['id'][:6]}"
-        if st.button(label, key=f"sess-{s['id']}", use_container_width=True):
-            st.session_state["session_id"] = s["id"]
-            st.rerun()
+        col_sel, col_del = st.columns([5, 1])
+        with col_sel:
+            if st.button(label, key=f"sess-{s['id']}", use_container_width=True):
+                st.session_state["session_id"] = s["id"]
+                st.rerun()
+        with col_del:
+            if st.button("✕", key=f"del-{s['id']}", use_container_width=True):
+                delete_session(s["id"])
+                if st.session_state.get("session_id") == s["id"]:
+                    st.session_state.pop("session_id", None)
+                st.rerun()
 
     st.divider()
     with st.expander("⚙️ Settings"):
@@ -56,7 +66,11 @@ with st.sidebar:
 # -- init session ---------------------------------------------------------
 
 if "session_id" not in st.session_state:
-    st.session_state["session_id"] = create_session()
+    existing = list_sessions()
+    if existing:
+        st.session_state["session_id"] = existing[0]["id"]
+    else:
+        st.session_state["session_id"] = create_session()
 sid = st.session_state["session_id"]
 
 agent = DeepResearchAgent(
@@ -70,6 +84,26 @@ agent = DeepResearchAgent(
 
 st.markdown("### Deep Research Agent")
 st.caption(f"Session `{sid}`  ·  No agent framework  ·  Tavily + Groq Llama 3.3 70B")
+
+# -- empty-state welcome --------------------------------------------------
+
+if not get_messages(sid):
+    st.markdown("")
+    st.info(
+        "Ask any research question — I'll plan a strategy, search the "
+        "web, read the top sources, and answer with inline citations. "
+        "Try one of these:"
+    )
+    cols = st.columns(3)
+    examples = [
+        "Who founded Sarvam AI and what is their flagship Indic LLM?",
+        "Compare RAG vs fine-tuning for enterprise knowledge.",
+        "What were India's major AI policy updates in 2025?",
+    ]
+    for col, ex in zip(cols, examples):
+        if col.button(ex, use_container_width=True):
+            st.session_state["_prefill"] = ex
+            st.rerun()
 
 # -- past conversation ----------------------------------------------------
 
@@ -101,7 +135,12 @@ for msg in get_messages(sid):
 
 # -- input ----------------------------------------------------------------
 
-if user_query := st.chat_input("Ask a research question…"):
+prefill = st.session_state.pop("_prefill", "")
+user_query = st.chat_input("Ask a research question…")
+if prefill and not user_query:
+    user_query = prefill
+
+if user_query:
     with st.chat_message("user"):
         st.markdown(user_query)
 

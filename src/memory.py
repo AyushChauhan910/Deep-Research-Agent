@@ -77,15 +77,35 @@ def create_session(title: str = "New session") -> str:
     return sid
 
 
-def list_sessions() -> List[Dict]:
+def list_sessions(include_empty: bool = True) -> List[Dict]:
     conn = _conn()
     try:
-        rows = conn.execute(
-            "SELECT id, title, created_at FROM sessions ORDER BY created_at DESC"
-        ).fetchall()
+        if include_empty:
+            rows = conn.execute(
+                "SELECT id, title, created_at FROM sessions ORDER BY created_at DESC"
+            ).fetchall()
+        else:
+            rows = conn.execute(
+                """SELECT s.id, s.title, s.created_at
+                   FROM sessions s
+                   JOIN messages m ON m.session_id = s.id
+                   GROUP BY s.id
+                   ORDER BY s.created_at DESC"""
+            ).fetchall()
     finally:
         conn.close()
     return [dict(r) for r in rows]
+
+
+def delete_session(session_id: str):
+    conn = _conn()
+    try:
+        conn.execute("DELETE FROM turns WHERE session_id = ?", (session_id,))
+        conn.execute("DELETE FROM messages WHERE session_id = ?", (session_id,))
+        conn.execute("DELETE FROM sessions WHERE id = ?", (session_id,))
+        conn.commit()
+    finally:
+        conn.close()
 
 
 def rename_session(session_id: str, title: str):
