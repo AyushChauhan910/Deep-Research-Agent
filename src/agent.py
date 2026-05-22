@@ -8,9 +8,11 @@ from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Optional
 
 from .config import (
-    DEFAULT_MAX_CHUNKS, DEFAULT_MAX_PAGES, DEFAULT_MAX_QUERIES,
-    DEFAULT_RESULTS_PER_QUERY, MAX_CONTEXT_CHARS, REFINE_GROUNDING_THRESHOLD,
-    SUMMARIZE_THRESHOLD_TOKENS,
+    CRITIC_MAX_TOKENS, DEFAULT_MAX_CHUNKS, DEFAULT_MAX_PAGES, DEFAULT_MAX_QUERIES,
+    DEFAULT_RESULTS_PER_QUERY, MAX_CONTEXT_CHARS, MAX_SUMMARY_INPUT_CHARS,
+    PLAN_MAX_TOKENS, REFINE_GROUNDING_THRESHOLD, REFINE_MAX_PAGES,
+    REFINE_MAX_QUERIES, SNIPPET_STORE_CHARS, SUMMARIZE_THRESHOLD_TOKENS,
+    SYNTH_MAX_TOKENS,
 )
 from .context import chunk_pages, select_context
 from .fetcher import fetch_many
@@ -61,10 +63,9 @@ class DeepResearchAgent:
             query=query, context=summary or "(no prior context)"
         )
         raw = self.llm.chat([{"role": "user", "content": prompt}],
-                            temperature=0.4, max_tokens=600)
+                            temperature=0.4, max_tokens=PLAN_MAX_TOKENS)
         parsed = extract_json(raw)
-        if not parsed or "queries" not in parsed or not parsed["queries"]:
-            # fallback so we never crash on a bad LLM JSON
+        if not parsed or not parsed.get("queries"):
             parsed = {"plan": "Direct search.", "queries": [query]}
         parsed["queries"] = parsed["queries"][: self.k_queries]
         parsed["plan"] = parsed.get("plan", "")
@@ -81,11 +82,13 @@ class DeepResearchAgent:
         return merged
 
     def fetch(self, results, top_n: int):
+        """Fetch the top_n URLs from search results, using result titles as fallback page titles."""
         urls = [r.url for r in results[:top_n]]
         title_lookup = {r.url: r.title for r in results}
         return fetch_many(urls, concurrency=5, title_lookup=title_lookup)
 
     def build_context(self, query: str, pages):
+        """Chunk fetched pages and select the most query-relevant chunks with domain diversity."""
         all_chunks = chunk_pages(pages)
         return select_context(query, all_chunks,
                               max_chunks=self.k_chunks,
@@ -117,29 +120,55 @@ class DeepResearchAgent:
         if on_token:
             full = []
             for tok in self.llm.stream([{"role": "user", "content": prompt}],
-                                       temperature=0.2, max_tokens=1500):
+                                       temperature=0.2, max_tokens=SYNTH_MAX_TOKENS):
                 full.append(tok)
                 on_token(tok)
             return "".join(full)
         return self.llm.chat([{"role": "user", "content": prompt}],
-                             temperature=0.2, max_tokens=1500)
+                             temperature=0.2, max_tokens=SYNTH_MAX_TOKENS)
 
     def critique(self, query: str, answer: str, n_sources: int) -> dict:
         prompt = CRITIC_PROMPT.format(query=query, answer=answer, n_sources=n_sources)
         raw = self.llm.chat([{"role": "user", "content": prompt}],
-                            temperature=0.0, max_tokens=300)
+                            temperature=0.0, max_tokens=CRITIC_MAX_TOKENS)
         return extract_json(raw) or {}
 
     def maybe_update_summary(self, session_id: str):
+        """Compress conversation history into a rolling summary when token count exceeds the threshold."""
         msgs = get_messages(session_id)
         total = sum(approx_tokens(m["content"]) for m in msgs)
         if total < SUMMARIZE_THRESHOLD_TOKENS:
             return
         conv = "\n".join(f"{m['role'].upper()}: {m['content']}" for m in msgs)
-        prompt = SUMMARIZE_PROMPT.format(conversation=conv[-8000:])
+        prompt = SUMMARIZE_PROMPT.format(conversation=conv[-MAX_SUMMARY_INPUT_CHARS:])
         summary = self.llm.chat([{"role": "user", "content": prompt}],
-                                temperature=0.2, max_tokens=300)
+                                temperature=0.2, max_tokens=CRITIC_MAX_TOKENS)
         update_summary(session_id, summary)
+
+    def _persist(self, session_id: str, query: str, plan: dict, pages: list,
+                 chunks: list, answer: str, critique: dict,
+                 refined: bool, elapsed: float) -> list:
+        """Save the completed turn to the session store and return the citations list."""
+        citations = [
+            {"n": i + 1, "title": c.title, "url": c.url,
+             "domain": c.domain, "relevance": c.relevance}
+            for i, c in enumerate(chunks)
+        ]
+        save_turn(session_id, {
+            "query": query,
+            "search_queries": plan["queries"],
+            "urls_opened": [p.url for p in pages],
+            "context_snippets": [{"url": c.url, "text": c.text[:SNIPPET_STORE_CHARS]}
+                                 for c in chunks],
+            "answer": answer,
+            "citations": citations,
+            "critique": critique,
+            "refined": refined,
+            "elapsed_s": elapsed,
+        })
+        add_message(session_id, "assistant", answer)
+        self.maybe_update_summary(session_id)
+        return citations
 
     # -- main entrypoint -------------------------------------------------
 
@@ -150,21 +179,18 @@ class DeepResearchAgent:
         add_message(session_id, "user", query)
         summary = get_summary(session_id)
 
-        # 1. PLAN
         self._emit(on_event, "plan_start", "Planning research strategy…")
         plan = self.plan(query, summary)
         self._emit(on_event, "plan_done",
                    f"Plan ready · {len(plan['queries'])} search queries",
                    {"plan": plan["plan"], "queries": plan["queries"]})
 
-        # 2. SEARCH
         self._emit(on_event, "search_start", "Searching the web…")
         results = self.search_all(plan["queries"])
         self._emit(on_event, "search_done",
                    f"Found {len(results)} unique sources",
                    {"top_urls": [r.url for r in results[:8]]})
 
-        # 3. FETCH
         self._emit(on_event, "fetch_start",
                    f"Reading top {min(self.k_fetch, len(results))} pages…")
         pages = self.fetch(results, top_n=self.k_fetch)
@@ -172,14 +198,12 @@ class DeepResearchAgent:
                    f"Extracted content from {len(pages)} pages",
                    {"fetched": [p.url for p in pages]})
 
-        # 4. SELECT CONTEXT
         self._emit(on_event, "context_start", "Selecting relevant context…")
         chunks = self.build_context(query, pages)
         self._emit(on_event, "context_done",
                    f"Selected {len(chunks)} chunks from "
                    f"{len(set(c.domain for c in chunks))} domains")
 
-        # 5. ANSWER
         self._emit(on_event, "answer_start",
                    "Synthesizing answer with citations…")
         if not chunks:
@@ -188,13 +212,11 @@ class DeepResearchAgent:
         else:
             answer = self.synthesize(query, chunks, summary, on_token=on_token)
 
-        # 6. CRITIC
         self._emit(on_event, "critic_start", "Self-checking grounding…")
         critique = self.critique(query, answer, len(chunks))
         self._emit(on_event, "critic_done", "Quality check complete",
                    {"critique": critique})
 
-        # 6b. ITERATIVE REFINEMENT — one extra pass when grounding is weak
         if chunks and critique.get("grounding", 5) < REFINE_GROUNDING_THRESHOLD:
             self._emit(on_event, "refine_start",
                        f"Grounding {critique.get('grounding')}/5 — searching for better sources…",
@@ -207,9 +229,9 @@ class DeepResearchAgent:
             )
             refined_plan = self.plan(refine_input, answer[:400])
             seen_urls = {p.url for p in pages}
-            extra_results = [r for r in self.search_all(refined_plan["queries"][:2])
+            extra_results = [r for r in self.search_all(refined_plan["queries"][:REFINE_MAX_QUERIES])
                              if r.url not in seen_urls]
-            extra_pages = self.fetch(extra_results, top_n=4)
+            extra_pages = self.fetch(extra_results, top_n=REFINE_MAX_PAGES)
             if extra_pages:
                 pages = pages + extra_pages
                 chunks = self.build_context(query, pages)
@@ -225,25 +247,10 @@ class DeepResearchAgent:
                 self._emit(on_event, "refine_done",
                            "No new sources found — keeping original answer", {})
 
-        # 7. PERSIST
-        citations = [
-            {"n": i + 1, "title": c.title, "url": c.url,
-             "domain": c.domain, "relevance": c.relevance}
-            for i, c in enumerate(chunks)
-        ]
         elapsed = round(time.time() - t0, 2)
-        save_turn(session_id, {
-            "query": query,
-            "search_queries": plan["queries"],
-            "urls_opened": [p.url for p in pages],
-            "context_snippets": [{"url": c.url, "text": c.text[:600]} for c in chunks],
-            "answer": answer,
-            "citations": citations,
-            "critique": critique,
-            "elapsed_s": elapsed,
-        })
-        add_message(session_id, "assistant", answer)
-        self.maybe_update_summary(session_id)
+        refined = len(pages) > self.k_fetch
+        citations = self._persist(session_id, query, plan, pages, chunks,
+                                  answer, critique, refined, elapsed)
 
         self._emit(on_event, "done", f"Done in {elapsed:.1f}s")
 

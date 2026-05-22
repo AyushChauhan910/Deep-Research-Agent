@@ -43,6 +43,9 @@ _UNC_CUES = [
     "uncertain", "not enough", "insufficient", "can't confirm", "cannot confirm",
     "no clear", "unclear", "couldn't find", "speculative", "varies widely",
     "would require", "projection", "no reliable", "limited evidence",
+    "not contain enough", "not provided", "does not contain",
+    "isn't enough", "lack sufficient", "insufficient information",
+    "no information", "not available", "cannot determine",
 ]
 
 _CONFLICT_CUES = [

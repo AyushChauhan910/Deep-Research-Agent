@@ -7,7 +7,6 @@ import uuid
 from datetime import datetime
 from typing import Dict, List
 
-from .config import LLM_MODEL  # noqa: F401 (kept for reference)
 
 DB_PATH = os.environ.get("DB_PATH", "./data/sessions.db")
 
@@ -163,7 +162,7 @@ def get_turns(session_id: str) -> List[Dict]:
                   "citations", "critique"):
             try:
                 d[k] = json.loads(d[k]) if d[k] else ([] if k != "critique" else {})
-            except Exception:
+            except json.JSONDecodeError:
                 d[k] = [] if k != "critique" else {}
         out.append(d)
     return out

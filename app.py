@@ -19,7 +19,7 @@ st.set_page_config(page_title="Deep Research Agent", layout="wide", page_icon="�
 
 @st.cache_resource
 def get_clients():
-    llm = LLM(model=os.environ.get("LLM_MODEL", "llama-3.3-70b-versatile"))
+    llm = LLM()
     search = TavilySearch(api_key=os.environ["TAVILY_API_KEY"])
     return llm, search
 
@@ -108,7 +108,7 @@ if user_query := st.chat_input("Ask a research question…"):
     with st.chat_message("assistant"):
         status = st.status("Starting research…", expanded=True)
         token_slot = st.empty()
-        acc = {"text": ""}
+        tokens = []
 
         def on_event(ev: Event):
             with status:
@@ -141,8 +141,8 @@ if user_query := st.chat_input("Ask a research question…"):
                         st.caption(f"➕ {u}")
 
         def on_token(tok: str):
-            acc["text"] += tok
-            token_slot.markdown(acc["text"] + "▌")
+            tokens.append(tok)
+            token_slot.markdown("".join(tokens) + "▌")
 
         try:
             result = agent.run(user_query, sid,

@@ -21,13 +21,12 @@ class TavilySearch:
             "search_depth": "advanced",
             "max_results": max_results,
             "include_raw_content": include_raw,
-            "include_answer": False,   # we synthesize ourselves
+            "include_answer": False,
         }
         try:
             r = httpx.post(self.BASE, json=payload, timeout=30)
             r.raise_for_status()
-        except Exception as e:
-            # Surface but don't crash — caller decides
+        except (httpx.HTTPStatusError, httpx.TimeoutException, httpx.RequestError) as e:
             print(f"[search] error for '{query[:60]}': {e}")
             return []
 

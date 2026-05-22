@@ -14,6 +14,18 @@ DEFAULT_MAX_CHUNK_CHARS = 1500
 # Context budget for synthesis
 MAX_CONTEXT_CHARS = 14_000
 SUMMARIZE_THRESHOLD_TOKENS = 2_000
+MAX_SUMMARY_INPUT_CHARS = 8_000
 
 # Iterative refinement: re-search when critic grounding is below this score (1-5)
 REFINE_GROUNDING_THRESHOLD = 3
+REFINE_MAX_QUERIES = 2
+REFINE_MAX_PAGES = 4
+
+# LLM token budgets per call type
+PLAN_MAX_TOKENS = 600
+SYNTH_MAX_TOKENS = 1_500
+CRITIC_MAX_TOKENS = 300
+
+# Storage / page filtering
+SNIPPET_STORE_CHARS = 600
+MIN_PAGE_CHARS = 200

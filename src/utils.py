@@ -1,3 +1,4 @@
+"""Lightweight text utilities: token estimation, JSON extraction, and truncation."""
 import json
 import re
 from typing import Optional

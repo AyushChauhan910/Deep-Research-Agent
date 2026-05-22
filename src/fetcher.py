@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 import httpx
 import trafilatura
 
+from .config import MIN_PAGE_CHARS
 from .models import FetchedPage
 
 HEADERS = {
@@ -38,7 +39,7 @@ async def _fetch_one(client: httpx.AsyncClient, url: str) -> Optional[FetchedPag
     except Exception:
         text = None
 
-    if not text or len(text) < 200:
+    if not text or len(text) < MIN_PAGE_CHARS:
         return None
 
     title = ""

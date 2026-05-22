@@ -64,11 +64,11 @@ def chunk_pages(pages: List[FetchedPage]) -> List[ContextChunk]:
 
 
 def _score(query_tokens: set, chunk_text_: str) -> float:
+    """BM25-style relevance: hit count divided by sqrt(chunk length) to sub-linearly penalize long chunks."""
     c_toks = _tokenize(chunk_text_)
     if not c_toks:
         return 0.0
     hits = sum(1 for t in c_toks if t in query_tokens)
-    # length-normalized so we don't over-reward long chunks
     return hits / (len(c_toks) ** 0.5)
 
 
