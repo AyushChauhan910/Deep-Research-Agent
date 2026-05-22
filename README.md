@@ -145,17 +145,17 @@ python eval/run_eval.py
 
 **Metrics:** the five from the Design Note above, plus an LLM-as-judge rubric (grounded, relevant, well-cited, clear, uncertainty-calibrated, each 1-5).
 
-**Sample results** (from a run on 2026-XX-XX, see `eval/results/`):
+**Sample results** (see `eval/results/results_1779430617.json`):
 
 | Metric | Mean |
 |---|---|
 | LLM-judge grounded | 4.3/5 |
-| LLM-judge relevant | 4.6/5 |
-| LLM-judge well-cited | 4.4/5 |
-| Citation density | 3.8 per 100 words |
-| Source diversity | 0.78 |
-| Keyword coverage | 0.79 |
-| Mean latency | ~22 s/query |
+| LLM-judge relevant | 4.8/5 |
+| LLM-judge well-cited | 3.8/5 |
+| Citation density | 5.2 per 100 words |
+| Source diversity | 0.59 |
+| Keyword coverage | 0.65 |
+| Mean latency | ~24 s/query |
 | Uncertainty correctly expressed | 1/1 hard case |
 | Conflict correctly flagged | 1/1 hard case |
 
@@ -166,7 +166,7 @@ python eval/run_eval.py
 ## Limitations & future work
 
 - **Lexical-only chunk scoring** — embeddings would catch paraphrase
-- **No iterative refinement loop yet** — designed for, not yet wired up
+- **Iterative refinement is single-pass** — if the critic scores grounding < 3, one extra search round fires; more than one round of refinement is not yet implemented
 - **No per-claim citation verification** — currently relies on synthesizer obedience and judge spot-check; a stricter system would re-check each claim against its source span
 - **Streamlit can't truly stream across stages** — current UX uses `st.status` updates which are good but FastAPI SSE would feel more "live"
 
