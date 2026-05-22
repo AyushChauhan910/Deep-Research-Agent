@@ -1,0 +1,730 @@
+[
+  {
+    "id": "fact-01",
+    "type": "factual",
+    "question": "Who founded Sarvam AI and where is the company headquartered?",
+    "expected_keywords": [
+      "Vivek Raghavan",
+      "Pratyush Kumar",
+      "Bengaluru"
+    ],
+    "answer": "Sarvam AI was founded by Dr. Vivek Raghavan and Dr. Pratyush Kumar in August 2023 [6]. The company is headquartered in Bengaluru, India [1]. \n\nSource [1] provides information about the company's founding and headquarters, while source [6] confirms the founders' names and the founding date. There is no conflicting information among the sources regarding the founding and headquarters of Sarvam AI.\n\nSources:\n[1] Sarvam - 2026 Company Profile & Team - Tracxn (https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw)\n[6] About us | Sarvam AI (https://www.sarvam.ai/about-us)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Sarvam - 2026 Company Profile & Team - Tracxn",
+        "url": "https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw",
+        "domain": "tracxn.com",
+        "relevance": 2.058
+      },
+      {
+        "n": 2,
+        "title": "Sarvam - 2026 Company Profile & Team - Tracxn",
+        "url": "https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw",
+        "domain": "tracxn.com",
+        "relevance": 1.8571
+      },
+      {
+        "n": 3,
+        "title": "Sarvam AI Powering a Made-in-India AI Revolution",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2231169&reg=3&lang=1",
+        "domain": "www.pib.gov.in",
+        "relevance": 1.3693
+      },
+      {
+        "n": 4,
+        "title": "Sarvam AI Powering a Made-in-India AI Revolution",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2231169&reg=3&lang=1",
+        "domain": "www.pib.gov.in",
+        "relevance": 1.3524
+      },
+      {
+        "n": 5,
+        "title": "Sarvam | LinkedIn",
+        "url": "https://www.linkedin.com/company/sarvam-ai",
+        "domain": "www.linkedin.com",
+        "relevance": 0.9663
+      },
+      {
+        "n": 6,
+        "title": "About us | Sarvam AI",
+        "url": "https://www.sarvam.ai/about-us",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.8696
+      },
+      {
+        "n": 7,
+        "title": "Sarvam | LinkedIn",
+        "url": "https://www.linkedin.com/company/sarvam-ai",
+        "domain": "www.linkedin.com",
+        "relevance": 0.7559
+      },
+      {
+        "n": 8,
+        "title": "Sarvam | India's Full-Stack Sovereign AI Platform",
+        "url": "https://www.sarvam.ai",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.7298
+      }
+    ],
+    "metrics": {
+      "citation_density": 7.5,
+      "unique_citations": 2,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 6,
+      "n_sources_cited": 8,
+      "elapsed_s": 24.21,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 5,
+        "issues": "none"
+      },
+      "keyword_coverage": 1.0,
+      "judge_grounded": 5,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 3
+    }
+  },
+  {
+    "id": "fact-02",
+    "type": "factual",
+    "question": "When did India's Digital Personal Data Protection Act receive presidential assent?",
+    "expected_keywords": [
+      "2023",
+      "August",
+      "DPDP"
+    ],
+    "answer": "The Digital Personal Data Protection Act of India received presidential assent in August 2023 [2]. However, the exact date of presidential assent is not specified in the provided sources. Source [3] mentions that the act \"took effect in August 2023\" and provides an effective date of August 11, 2023, but it is unclear if this is the date of presidential assent or the date the act came into effect.\n\nSources:\n[1] The Digital Personal Data Protection Act of India, Explained - Future of Privacy Forum (https://fpf.org/blog/the-digital-personal-data-protection-act-of-india-explained)\n[2] Digital Personal Data Protection Act India: Compliance Guide 2026 (https://www.atlassystems.com/blog/digital-personal-data-protection-act-india)\n[3] India's Digital Personal Data Protection Act (https://cookie-script.com/privacy-laws/india-digital-personal-data-protection-act)\n[4] India's Digital Personal Data Protection Act (https://cookie-script.com/privacy-laws/india-digital-personal-data-protection-act)\n[5] Digital Personal Data Protection Act India: Compliance Guide 2026 (https://www.atlassystems.com/blog/digital-personal-data-protection-act-india)\n[6] The Digital Personal Data Protection Act of India, Explained - Future of Privacy Forum (https://fpf.org/blog/the-digital-personal-data-protection-act-of-india-explained)\n[7] India\u2019s Digital Personal Data Protection Act | Nixon Peabody LLP (https://www.nixonpeabody.com/insights/videos/2026/03/03/indias-digital-personal-data-protection-act)\n[8] India\u2019s Digital Personal Data Protection Act | Nixon Peabody LLP (https://www.nixonpeabody.com/insights/videos/2026/03/03/indias-digital-personal-data-protection-act)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "The Digital Personal Data Protection Act of India, Explained - Future of Privacy Forum",
+        "url": "https://fpf.org/blog/the-digital-personal-data-protection-act-of-india-explained",
+        "domain": "fpf.org",
+        "relevance": 2.9719
+      },
+      {
+        "n": 2,
+        "title": "Digital Personal Data Protection Act India: Compliance Guide 2026",
+        "url": "https://www.atlassystems.com/blog/digital-personal-data-protection-act-india",
+        "domain": "www.atlassystems.com",
+        "relevance": 2.9394
+      },
+      {
+        "n": 3,
+        "title": "India's Digital Personal Data Protection Act",
+        "url": "https://cookie-script.com/privacy-laws/india-digital-personal-data-protection-act",
+        "domain": "cookie-script.com",
+        "relevance": 2.8868
+      },
+      {
+        "n": 4,
+        "title": "India's Digital Personal Data Protection Act",
+        "url": "https://cookie-script.com/privacy-laws/india-digital-personal-data-protection-act",
+        "domain": "cookie-script.com",
+        "relevance": 2.4846
+      },
+      {
+        "n": 5,
+        "title": "Digital Personal Data Protection Act India: Compliance Guide 2026",
+        "url": "https://www.atlassystems.com/blog/digital-personal-data-protection-act-india",
+        "domain": "www.atlassystems.com",
+        "relevance": 2.1687
+      },
+      {
+        "n": 6,
+        "title": "The Digital Personal Data Protection Act of India, Explained - Future of Privacy Forum",
+        "url": "https://fpf.org/blog/the-digital-personal-data-protection-act-of-india-explained",
+        "domain": "fpf.org",
+        "relevance": 2.069
+      },
+      {
+        "n": 7,
+        "title": "India\u2019s Digital Personal Data Protection Act | Nixon Peabody LLP",
+        "url": "https://www.nixonpeabody.com/insights/videos/2026/03/03/indias-digital-personal-data-protection-act",
+        "domain": "www.nixonpeabody.com",
+        "relevance": 1.6813
+      },
+      {
+        "n": 8,
+        "title": "India\u2019s Digital Personal Data Protection Act | Nixon Peabody LLP",
+        "url": "https://www.nixonpeabody.com/insights/videos/2026/03/03/indias-digital-personal-data-protection-act",
+        "domain": "www.nixonpeabody.com",
+        "relevance": 0.9457
+      }
+    ],
+    "metrics": {
+      "citation_density": 6.1,
+      "unique_citations": 8,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 18.57,
+      "expresses_uncertainty": true,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 4,
+        "conflict_handling": 5,
+        "issues": "The answer lacks a specific date of presidential assent."
+      },
+      "keyword_coverage": 0.67,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 2,
+      "judge_clear": 4,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "compare-01",
+    "type": "comparison",
+    "question": "Compare retrieval-augmented generation and fine-tuning for adapting LLMs to private enterprise documents.",
+    "expected_keywords": [
+      "retrieval",
+      "fine-tuning",
+      "latency",
+      "update",
+      "cost"
+    ],
+    "answer": "When adapting Large Language Models (LLMs) to private enterprise documents, two approaches can be considered: retrieval-augmented generation (RAG) and fine-tuning. RAG is an AI technique that enhances LLMs by retrieving real-time, external data at inference time, making it ideal for dynamic industries like financial services and healthcare [1]. On the other hand, fine-tuning is a machine-learning technique that modifies an LLM by training it on domain-specific data, which helps embed industry expertise directly into the model [1].\n\nThe key difference between RAG and fine-tuning is that fine-tuning modifies a model's internal knowledge by retraining it with domain-specific data, whereas RAG retrieves external information when generating responses, ensuring the AI uses the most current and relevant data without needing expensive retraining cycles [1]. Source [1] reports that RAG is more efficient and secure for enterprises handling sensitive information, while source [2] explains that RAG searches relevant information and queries relevant enterprise data based on the user's prompt, integrating this information into an enhanced prompt.\n\nFine-tuning, however, requires a supervised training phase, where question-answer pairs are provided to optimize the LLM's performance [4]. It also involves further training the model on a narrower dataset for a specific domain or application, like healthcare research or customer service [2]. Source [3] notes that fine-tuning is a process in which a pre-trained model is adapted for particular tasks or domains by continuing to train the model using only a domain-specific data set.\n\nIn terms of resource requirements, fine-tuning is computationally intensive and requires substantial time investment, making it ideal for teams with the infrastructure and expertise to support complex model development [5]. RAG, on the other hand, is comparatively lightweight in terms of model training and requires a robust retrieval system and well-structured data architecture [5].\n\nWhen comparing retrieval-augmented generation vs fine-tuning, RAG stands out for its ability to scale and adapt without repeated retraining cycles [5]. Fine-tuning is ideal for applications where nuance, regulatory compliance, or stylistic control are critical [5]. However, source [7] reports that fine-tuning is a process that can be used to adapt LLMs for specialized tasks or domains, but it also highlights the benefits and limitations associated with fine-tuning LLMs for specialized use cases.\n\nIn conclusion, both RAG and fine-tuning have their advantages and disadvantages, and the choice between them depends on the specific use case and requirements of the enterprise. While RAG offers a more efficient and secure method for enhancing AI-driven interactions, fine-tuning provides a way to embed domain expertise directly into the model.\n\nSources:\n[1] RAG & Fine-Tuning: Choosing Your LLM Optimization Strategy | DataMotion (https://datamotion.com/rag-vs-fine-tuning)\n[2] Retrieval-Augmented Generation vs Fine-Tuning: What\u2019s Right for You? (https://www.k2view.com/blog/retrieval-augmented-generation-vs-fine-tuning)\n[3] Fine-Tuning Large Language Models for Specialized Use Cases (https://pmc.ncbi.nlm.nih.gov/articles/PMC11976015)\n[4] Knowledge Graphs and LLMs: Fine-Tuning vs. Retrieval-Augmented Generation (https://neo4j.com/blog/developer/fine-tuning-vs-rag)\n[5] Fine-Tuning vs RAG: Key Differences Explained (2026 Guide) (https://orq.ai/blog/finetuning-vs-rag)\n[6] Fine-Tuning vs RAG: Key Differences Explained (2026 Guide) (https://orq.ai/blog/finetuning-vs-rag)\n[7] Fine-Tuning Large Language Models for Specialized Use Cases (https://pmc.ncbi.nlm.nih.gov/articles/PMC11976015)\n[8] RAG & Fine-Tuning: Choosing Your LLM Optimization Strategy | DataMotion (https://datamotion.com/rag-vs-fine-tuning)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "RAG & Fine-Tuning: Choosing Your LLM Optimization Strategy | DataMotion",
+        "url": "https://datamotion.com/rag-vs-fine-tuning",
+        "domain": "datamotion.com",
+        "relevance": 2.3792
+      },
+      {
+        "n": 2,
+        "title": "Retrieval-Augmented Generation vs Fine-Tuning: What\u2019s Right for You?",
+        "url": "https://www.k2view.com/blog/retrieval-augmented-generation-vs-fine-tuning",
+        "domain": "www.k2view.com",
+        "relevance": 2.1667
+      },
+      {
+        "n": 3,
+        "title": "Fine-Tuning Large Language Models for Specialized Use Cases",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11976015",
+        "domain": "pmc.ncbi.nlm.nih.gov",
+        "relevance": 1.8534
+      },
+      {
+        "n": 4,
+        "title": "Knowledge Graphs and LLMs: Fine-Tuning vs. Retrieval-Augmented Generation - Graph Database & Analytics",
+        "url": "https://neo4j.com/blog/developer/fine-tuning-vs-rag",
+        "domain": "neo4j.com",
+        "relevance": 1.824
+      },
+      {
+        "n": 5,
+        "title": "Fine-Tuning vs RAG: Key Differences Explained (2026 Guide)",
+        "url": "https://orq.ai/blog/finetuning-vs-rag",
+        "domain": "orq.ai",
+        "relevance": 1.4846
+      },
+      {
+        "n": 6,
+        "title": "Fine-Tuning vs RAG: Key Differences Explained (2026 Guide)",
+        "url": "https://orq.ai/blog/finetuning-vs-rag",
+        "domain": "orq.ai",
+        "relevance": 1.3646
+      },
+      {
+        "n": 7,
+        "title": "Fine-Tuning Large Language Models for Specialized Use Cases",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11976015",
+        "domain": "pmc.ncbi.nlm.nih.gov",
+        "relevance": 1.3156
+      },
+      {
+        "n": 8,
+        "title": "RAG & Fine-Tuning: Choosing Your LLM Optimization Strategy | DataMotion",
+        "url": "https://datamotion.com/rag-vs-fine-tuning",
+        "domain": "datamotion.com",
+        "relevance": 1.3064
+      }
+    ],
+    "metrics": {
+      "citation_density": 4.19,
+      "unique_citations": 8,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 7,
+      "n_sources_cited": 8,
+      "elapsed_s": 22.7,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 1,
+        "issues": "Lack of explicit conflict handling between sources."
+      },
+      "keyword_coverage": 0.4,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 3,
+      "judge_clear": 4,
+      "judge_uncertainty_calibration": 2
+    }
+  },
+  {
+    "id": "compare-02",
+    "type": "comparison",
+    "question": "How do Mistral 7B and Llama 3 8B compare on reasoning benchmarks?",
+    "expected_keywords": [
+      "MMLU",
+      "reasoning",
+      "Mistral",
+      "Llama"
+    ],
+    "answer": "To compare Mistral 7B and Llama 3 8B on reasoning benchmarks, we need to examine the available data from the provided sources. According to [6], Mistral 7B outperforms Llama 2\u2019s 7B models in all benchmarks and Llama 2\u2019s 13B model in tasks like massive multitask language understanding, reasoning, comprehension, math, and code. However, Llama 1 33B model is more accurate than Mistral in a few benchmarks, including knowledge, reasoning, and the Big-Bench Hard (BBH) benchmark [6]. \n\nSource [3] provides a comparison of different models, including Mistral, but it does not directly compare Mistral 7B and Llama 3 8B on reasoning benchmarks. However, it does mention that Qwen3 8B improves over Qwen3 7B on coding and reasoning benchmarks [3]. \n\nSource [1] compares Llama 3.1 8B Instruct and Ministral 3 (8B Reasoning 2512), which is not exactly the same as Mistral 7B, but it reports that Ministral 3 (8B Reasoning 2512) significantly outperforms Llama 3.1 8B Instruct across most benchmarks, including GPQA [1]. However, this comparison is not directly applicable to Mistral 7B and Llama 3 8B.\n\nIn conclusion, while the sources provide some information on the performance of Mistral 7B and Llama models on various benchmarks, there is no direct comparison of Mistral 7B and Llama 3 8B on reasoning benchmarks. Additional research would be necessary to determine the relative performance of these two models on reasoning tasks.\n\nSources:\n[1] Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison (https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest)\n[2] Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison (https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest)\n[3] Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026 (https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral)\n[4] Mistral 7B (https://mistral.ai/news/announcing-mistral-7b)\n[5] Llama 3 8B vs Mistral 7B: Small LLM Pricing Considerations | Vantage (https://www.vantage.sh/blog/best-small-llm-llama-3-8b-vs-mistral-7b-cost)\n[6] Mistral vs. Llama (https://www.educative.io/blog/mistral-vs-llama)\n[7] Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026 (https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral)\n[8] Exploring the Game-Changing Potential of Mistral 7B (https://www.labellerr.com/blog/mistral-7b-potential-by-mistral-ai)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison",
+        "url": "https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest",
+        "domain": "llm-stats.com",
+        "relevance": 4.1612
+      },
+      {
+        "n": 2,
+        "title": "Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison",
+        "url": "https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest",
+        "domain": "llm-stats.com",
+        "relevance": 3.49
+      },
+      {
+        "n": 3,
+        "title": "Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026",
+        "url": "https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral",
+        "domain": "www.promptquorum.com",
+        "relevance": 2.7408
+      },
+      {
+        "n": 4,
+        "title": "Mistral 7B",
+        "url": "https://mistral.ai/news/announcing-mistral-7b",
+        "domain": "mistral.ai",
+        "relevance": 2.4461
+      },
+      {
+        "n": 5,
+        "title": "Llama 3 8B vs Mistral 7B: Small LLM Pricing Considerations | Vantage",
+        "url": "https://www.vantage.sh/blog/best-small-llm-llama-3-8b-vs-mistral-7b-cost",
+        "domain": "www.vantage.sh",
+        "relevance": 2.3637
+      },
+      {
+        "n": 6,
+        "title": "Mistral vs. Llama",
+        "url": "https://www.educative.io/blog/mistral-vs-llama",
+        "domain": "www.educative.io",
+        "relevance": 2.1798
+      },
+      {
+        "n": 7,
+        "title": "Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026",
+        "url": "https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral",
+        "domain": "www.promptquorum.com",
+        "relevance": 2.1291
+      },
+      {
+        "n": 8,
+        "title": "Exploring the Game-Changing Potential of Mistral 7B",
+        "url": "https://www.labellerr.com/blog/mistral-7b-potential-by-mistral-ai",
+        "domain": "www.labellerr.com",
+        "relevance": 2.0412
+      }
+    ],
+    "metrics": {
+      "citation_density": 4.49,
+      "unique_citations": 8,
+      "source_diversity": 0.75,
+      "n_pages_fetched": 7,
+      "n_sources_cited": 8,
+      "elapsed_s": 22.75,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 3,
+        "conflict_handling": 4,
+        "issues": "The answer does not directly compare Mistral 7B and Llama 3 8B on reasoning benchmarks."
+      },
+      "keyword_coverage": 0.75,
+      "judge_grounded": 4,
+      "judge_relevant": 4,
+      "judge_well_cited": 3,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "multihop-01",
+    "type": "multi_hop",
+    "question": "What is Sarvam AI's flagship Indic LLM, and on which open model family is it built?",
+    "expected_keywords": [
+      "OpenHathi",
+      "Sarvam",
+      "Llama"
+    ],
+    "answer": "Sarvam AI's flagship Indic LLM is Sarvam 30B and Sarvam 105B [4]. However, the sources do not explicitly state which open model family Sarvam 30B and Sarvam 105B are built on. The sources only mention that Sarvam 30B and Sarvam 105B are reasoning models trained from scratch on large-scale, high-quality datasets curated in-house [4]. \n\nIt is also worth noting that the sources provide information on other open-source LLMs, such as Meta Llama 4, Mistral Large, Qwen 2.5, and DeepSeek [3], but they do not mention Sarvam 30B and Sarvam 105B being built on any of these models. \n\nTo determine which open model family Sarvam 30B and Sarvam 105B are built on, additional research would be necessary.\n\nSources:\n[1] Best Open Source LLMs In 2026: Benchmarks, Licenses And GPU Deployment Guide (https://acecloud.ai/blog/best-open-source-llms)\n[2] Best Open Source LLMs In 2026: Benchmarks, Licenses And GPU Deployment Guide (https://acecloud.ai/blog/best-open-source-llms)\n[3] Top Open-Source LLMs 2026: The Best Models & Comparison (https://kairntech.com/blog/articles/top-open-source-llm-models-in-2026)\n[4] Open-Sourcing Sarvam 30B and 105B | Sarvam AI (https://www.sarvam.ai/blogs/sarvam-30b-105b)\n[5] Top Open-Source LLMs 2026: The Best Models & Comparison (https://kairntech.com/blog/articles/top-open-source-llm-models-in-2026)\n[6] Best Open-Source LLMs in 2026 - Featherless (https://featherless.ai/blog/best-open-source-llms-2026)\n[7] The Best Open-Source LLMs in 2026 (https://www.bentoml.com/blog/navigating-the-world-of-open-source-large-language-models)\n[8] Open-Sourcing Sarvam 30B and 105B | Sarvam AI (https://www.sarvam.ai/blogs/sarvam-30b-105b)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Best Open Source LLMs In 2026: Benchmarks, Licenses And GPU Deployment Guide",
+        "url": "https://acecloud.ai/blog/best-open-source-llms",
+        "domain": "acecloud.ai",
+        "relevance": 1.3606
+      },
+      {
+        "n": 2,
+        "title": "Best Open Source LLMs In 2026: Benchmarks, Licenses And GPU Deployment Guide",
+        "url": "https://acecloud.ai/blog/best-open-source-llms",
+        "domain": "acecloud.ai",
+        "relevance": 1.2769
+      },
+      {
+        "n": 3,
+        "title": "Top Open-Source LLMs 2026: The Best Models & Comparison",
+        "url": "https://kairntech.com/blog/articles/top-open-source-llm-models-in-2026",
+        "domain": "kairntech.com",
+        "relevance": 1.2532
+      },
+      {
+        "n": 4,
+        "title": "Open-Sourcing Sarvam 30B and 105B | Sarvam AI",
+        "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.9487
+      },
+      {
+        "n": 5,
+        "title": "Top Open-Source LLMs 2026: The Best Models & Comparison",
+        "url": "https://kairntech.com/blog/articles/top-open-source-llm-models-in-2026",
+        "domain": "kairntech.com",
+        "relevance": 0.8724
+      },
+      {
+        "n": 6,
+        "title": "Best Open-Source LLMs in 2026 - Featherless",
+        "url": "https://featherless.ai/blog/best-open-source-llms-2026",
+        "domain": "featherless.ai",
+        "relevance": 0.8593
+      },
+      {
+        "n": 7,
+        "title": "The Best Open-Source LLMs in 2026",
+        "url": "https://www.bentoml.com/blog/navigating-the-world-of-open-source-large-language-models",
+        "domain": "www.bentoml.com",
+        "relevance": 0.7634
+      },
+      {
+        "n": 8,
+        "title": "Open-Sourcing Sarvam 30B and 105B | Sarvam AI",
+        "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.7553
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.39,
+      "unique_citations": 8,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 6,
+      "n_sources_cited": 8,
+      "elapsed_s": 21.98,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 3,
+        "conflict_handling": 4,
+        "issues": "The answer does not fully address the question about the open model family."
+      },
+      "keyword_coverage": 0.67,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 3,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "recent-01",
+    "type": "recent",
+    "question": "What were the major updates to India's IndiaAI Mission in 2025?",
+    "expected_keywords": [
+      "IndiaAI",
+      "compute",
+      "GPU"
+    ],
+    "answer": "The major updates to India's IndiaAI Mission in 2025 include the launch of the IndiaAI Startups Global program in March 2025, which aims to help 10 Indian startups expand into the European market [2]. Additionally, an expression of interest was published on May 9, 2025, for partner institutions to join the IndiaAI Safety Institute [2]. The India AI Mission has also made progress in expanding the country's computing infrastructure, with over 38,000 GPUs onboarded [1]. Furthermore, the mission has provided support to 500 PhD fellows, 5,000 postgraduates, and 8,000 undergraduates, with over 200 students receiving fellowships by July 2025 [2]. \n\nThe India AI Governance Guidelines 2025 were also published, which establish the philosophical and institutional foundation for AI governance in India [3]. These guidelines are structured around four interlocking components, including the Seven Sutras, Issues and Recommendations, Action Plan, and Practical Guidelines [3]. However, source [5] reports that India lacks an official AI law and regulation, which creates uncertainty about responsibility and accessibility, as well as ethical AI utilization and readiness.\n\nSource [1] reports that the IndiaAI Mission has made strong progress in expanding the country's computing infrastructure, but source [5] says that India's approach to AI governance is flexible yet lacks defined goals and measurable targets. \n\nThe India AI Governance Guidelines 2025 stand out as one of the first systematic national blueprints for Safe & Trusted AI under the IndiaAI Mission [4]. However, source [6] notes that the absence of strict AI bias and explainability laws in India can pose ethical risks for EU businesses.\n\nIt is also worth noting that the Prime Minister of India, Narendra Modi, co-chaired the AI Action Summit in Paris in February 2025, where he emphasized the need for transparency and bias-free datasets [7].\n\nSources:\n[1] Transforming India with AI (www.pib.gov.in) - https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209737&reg=3&lang=1\n[2] Transforming India with AI (www.pib.gov.in) - https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209737&reg=3&lang=1\n[3] India\u2019s AI Governance Guidelines 2025 (aign.global) - https://aign.global/ai-governance-insights/aign-global/indias-ai-governance-guidelines-2025\n[4] India\u2019s AI Governance Guidelines 2025 (aign.global) - https://aign.global/ai-governance-insights/aign-global/indias-ai-governance-guidelines-2025\n[5] India AI Governance Strategy 2025: Policy & Challenges (www.class24.study) - https://www.class24.study/current-affairs/india-artificial-intelligence-governance-policy-2025\n[6] India\u2019s AI Governance Guidelines Report \u2013 FAQs answered \u2013 Diaspora in Action for Human Rights and Democracy (dahrd.org) - https://dahrd.org/2025/04/15/indias-ai-governance-guidelines-report-faqs-answered\n[7] India\u2019s AI Governance Guidelines Report \u2013 FAQs answered \u2013 Diaspora in Action for Human Rights and Democracy (dahrd.org) - https://dahrd.org/2025/04/15/indias-ai-governance-guidelines-report-faqs-answered\n[8] India AI Governance Strategy 2025: Policy & Challenges (www.class24.study) - https://www.class24.study/current-affairs/india-artificial-intelligence-governance-policy-2025",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Transforming India with AI",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209737&reg=3&lang=1",
+        "domain": "www.pib.gov.in",
+        "relevance": 0.6985
+      },
+      {
+        "n": 2,
+        "title": "Transforming India with AI",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209737&reg=3&lang=1",
+        "domain": "www.pib.gov.in",
+        "relevance": 0.6554
+      },
+      {
+        "n": 3,
+        "title": "India\u2019s AI Governance Guidelines 2025",
+        "url": "https://aign.global/ai-governance-insights/aign-global/indias-ai-governance-guidelines-2025",
+        "domain": "aign.global",
+        "relevance": 0.343
+      },
+      {
+        "n": 4,
+        "title": "India\u2019s AI Governance Guidelines 2025",
+        "url": "https://aign.global/ai-governance-insights/aign-global/indias-ai-governance-guidelines-2025",
+        "domain": "aign.global",
+        "relevance": 0.3345
+      },
+      {
+        "n": 5,
+        "title": "India AI Governance Strategy 2025: Policy & Challenges",
+        "url": "https://www.class24.study/current-affairs/india-artificial-intelligence-governance-policy-2025",
+        "domain": "www.class24.study",
+        "relevance": 0.3244
+      },
+      {
+        "n": 6,
+        "title": "India\u2019s AI Governance Guidelines Report \u2013 FAQs answered \u2013 Diaspora in Action for Human Rights and Democracy",
+        "url": "https://dahrd.org/2025/04/15/indias-ai-governance-guidelines-report-faqs-answered",
+        "domain": "dahrd.org",
+        "relevance": 0.3024
+      },
+      {
+        "n": 7,
+        "title": "India\u2019s AI Governance Guidelines Report \u2013 FAQs answered \u2013 Diaspora in Action for Human Rights and Democracy",
+        "url": "https://dahrd.org/2025/04/15/indias-ai-governance-guidelines-report-faqs-answered",
+        "domain": "dahrd.org",
+        "relevance": 0.2449
+      },
+      {
+        "n": 8,
+        "title": "India AI Governance Strategy 2025: Policy & Challenges",
+        "url": "https://www.class24.study/current-affairs/india-artificial-intelligence-governance-policy-2025",
+        "domain": "www.class24.study",
+        "relevance": 0.1721
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.12,
+      "unique_citations": 8,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 26.67,
+      "expresses_uncertainty": true,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 4,
+        "issues": "none"
+      },
+      "keyword_coverage": 0.67,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 3,
+      "judge_clear": 4,
+      "judge_uncertainty_calibration": 4
+    }
+  },
+  {
+    "id": "conflict-01",
+    "type": "potentially_conflicting",
+    "question": "Is GPT-4 or Claude 3.5 Sonnet better for code generation? Cite benchmark numbers.",
+    "expected_keywords": [
+      "HumanEval",
+      "SWE",
+      "benchmark"
+    ],
+    "answer": "When it comes to code generation, Claude 3.5 Sonnet and GPT-4 are both viable options. However, according to the available benchmark numbers, Claude 3.5 Sonnet seems to have an edge over GPT-4 in coding proficiency. In an internal agentic coding evaluation, Claude 3.5 Sonnet solved 64% of problems, outperforming Claude 3 Opus which solved 38% [1]. Additionally, Claude 3.5 Sonnet scores 49% on SWE-bench Verified coding tasks [7]. \n\nIn comparison, while there are no direct benchmark numbers available for GPT-4 in the provided sources, GPT-4.5 is mentioned to be outperformed by Claude 3.7 Sonnet in coding tasks [4] [6]. It is essential to note that GPT-4.5 is a different model than GPT-4, and the performance difference between the two is not explicitly stated in the sources. \n\nSource [1] reports that Claude 3.5 Sonnet operates at twice the speed of Claude 3 Opus, which could be an advantage in code generation tasks that require quick responses [1]. However, the sources do not provide a direct comparison of the speeds of Claude 3.5 Sonnet and GPT-4.\n\nIn conclusion, based on the available benchmark numbers, Claude 3.5 Sonnet seems to be a stronger option for code generation. However, more research would be necessary to determine the exact performance difference between Claude 3.5 Sonnet and GPT-4, as the sources do not provide a direct comparison between the two models.\n\nSources:\n[1] Claude 3.5 Sonnet (www.anthropic.com) - https://www.anthropic.com/news/claude-3-5-sonnet\n[2] Best Comparison: Claude 3.5 Sonnet vs. GPT-4o & GPT-4o mini (neoteric.eu) - https://neoteric.eu/blog/claude-3-5-sonnet-vs-gpt-4o-and-4o-mini\n[3] Claude 3.5 Sonnet (Oct) - Intelligence, Performance & Price Analysis (artificialanalysis.ai) - https://artificialanalysis.ai/models/claude-35-sonnet\n[4] GPT-4.5 vs Claude 3.7 Sonnet (www.vellum.ai) - https://www.vellum.ai/blog/gpt-4-5-vs-claude-3-7-sonnet\n[5] Details about METR's preliminary evaluation of Claude 3.5 Sonnet (metr.org) - https://metr.org/evaluations/claude-3-5-sonnet-report\n[6] GPT-4.5 vs Claude 3.7 Sonnet (www.vellum.ai) - https://www.vellum.ai/blog/gpt-4-5-vs-claude-3-7-sonnet\n[7] Claude 3.5 Sonnet Complete Guide: AI Capabilities & Limits | Galileo (galileo.ai) - https://galileo.ai/blog/claude-3-5-sonnet-complete-guide-ai-capabilities-analysis\n[8] Best Comparison: Claude 3.5 Sonnet vs. GPT-4o & GPT-4o mini (neoteric.eu) - https://neoteric.eu/blog/claude-3-5-sonnet-vs-gpt-4o-and-4o-mini",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Claude 3.5 Sonnet",
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "domain": "www.anthropic.com",
+        "relevance": 3.1921
+      },
+      {
+        "n": 2,
+        "title": "Best Comparison: Claude 3.5 Sonnet vs. GPT-4o & GPT-4o mini",
+        "url": "https://neoteric.eu/blog/claude-3-5-sonnet-vs-gpt-4o-and-4o-mini",
+        "domain": "neoteric.eu",
+        "relevance": 3.148
+      },
+      {
+        "n": 3,
+        "title": "Claude 3.5 Sonnet (Oct) - Intelligence, Performance & Price Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-35-sonnet",
+        "domain": "artificialanalysis.ai",
+        "relevance": 2.9982
+      },
+      {
+        "n": 4,
+        "title": "GPT-4.5 vs Claude 3.7 Sonnet",
+        "url": "https://www.vellum.ai/blog/gpt-4-5-vs-claude-3-7-sonnet",
+        "domain": "www.vellum.ai",
+        "relevance": 2.9019
+      },
+      {
+        "n": 5,
+        "title": "Details about METR's preliminary evaluation of Claude 3.5 Sonnet",
+        "url": "https://metr.org/evaluations/claude-3-5-sonnet-report",
+        "domain": "metr.org",
+        "relevance": 2.7426
+      },
+      {
+        "n": 6,
+        "title": "GPT-4.5 vs Claude 3.7 Sonnet",
+        "url": "https://www.vellum.ai/blog/gpt-4-5-vs-claude-3-7-sonnet",
+        "domain": "www.vellum.ai",
+        "relevance": 2.7203
+      },
+      {
+        "n": 7,
+        "title": "Claude 3.5 Sonnet Complete Guide: AI Capabilities & Limits | Galileo",
+        "url": "https://galileo.ai/blog/claude-3-5-sonnet-complete-guide-ai-capabilities-analysis",
+        "domain": "galileo.ai",
+        "relevance": 2.6077
+      },
+      {
+        "n": 8,
+        "title": "Best Comparison: Claude 3.5 Sonnet vs. GPT-4o & GPT-4o mini",
+        "url": "https://neoteric.eu/blog/claude-3-5-sonnet-vs-gpt-4o-and-4o-mini",
+        "domain": "neoteric.eu",
+        "relevance": 2.3754
+      }
+    ],
+    "metrics": {
+      "citation_density": 4.36,
+      "unique_citations": 8,
+      "source_diversity": 0.75,
+      "n_pages_fetched": 8,
+      "n_sources_cited": 8,
+      "elapsed_s": 27.88,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 4,
+        "conflict_handling": 4,
+        "issues": "Lack of direct comparison between GPT-4 and Claude 3.5 Sonnet."
+      },
+      "keyword_coverage": 0.67,
+      "conflict_flagged": true,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "insufficient-01",
+    "type": "insufficient_evidence",
+    "question": "What will the exact market share of Indian LLM startups be in 2030?",
+    "should_express_uncertainty": true,
+    "answer": "The exact market share of Indian LLM startups in 2030 is not explicitly stated in the provided web sources [1]. The report discusses the large language model market in general, covering various aspects such as market dynamics, architecture, modality, model size, application, end user, and region. However, it does not provide specific information on the market share of Indian LLM startups in 2030.\n\nThe report does mention India as part of the Asia Pacific region, which is discussed in section 12.4 [1]. It notes that India has an emerging tech industry and a huge digital population, but it does not provide any specific data on the market share of Indian LLM startups.\n\nTo determine the exact market share of Indian LLM startups in 2030, additional research would be necessary, such as analyzing market trends, industry reports, and company data. This would help to provide a more accurate estimate of the market share.\n\nSources:\n[1] Large Language Model (LLM) Market Report 2024-2030, By Model Architecture, Geo, Tech, https://www.marketsandmarkets.com/Market-Reports/large-language-model-llm-market-102137956.html",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Large Language Model (LLM) Market Report 2024-2030, By Model Architecture, Geo, Tech",
+        "url": "https://www.marketsandmarkets.com/Market-Reports/large-language-model-llm-market-102137956.html",
+        "domain": "www.marketsandmarkets.com",
+        "relevance": 7.0166
+      },
+      {
+        "n": 2,
+        "title": "Large Language Model (LLM) Market Growth Analysis, Market Dynamics, Key Players and Innovations, Outlook and Forecast 2024-2030",
+        "url": "https://www.intelmarketresearch.com/large-language-model-llm-175",
+        "domain": "www.intelmarketresearch.com",
+        "relevance": 3.3535
+      },
+      {
+        "n": 3,
+        "title": "Large Language Model (LLM) Market Growth Analysis, Market Dynamics, Key Players and Innovations, Outlook and Forecast 2024-2030",
+        "url": "https://www.intelmarketresearch.com/large-language-model-llm-175",
+        "domain": "www.intelmarketresearch.com",
+        "relevance": 3.1859
+      },
+      {
+        "n": 4,
+        "title": "Large Language Model (LLM) Market Growth Analysis - Size and Forecast 2026-2030",
+        "url": "https://www.technavio.com/report/large-language-model-llm-market-industry-analysis",
+        "domain": "www.technavio.com",
+        "relevance": 1.5385
+      },
+      {
+        "n": 5,
+        "title": "Large Language Model (LLM) Market Report 2024-2030, By Model Architecture, Geo, Tech",
+        "url": "https://www.marketsandmarkets.com/Market-Reports/large-language-model-llm-market-102137956.html",
+        "domain": "www.marketsandmarkets.com",
+        "relevance": 1.3168
+      },
+      {
+        "n": 6,
+        "title": "LLM Market Share: Compare Usage & Adoption",
+        "url": "https://aimultiple.com/llm-market-share",
+        "domain": "aimultiple.com",
+        "relevance": 1.1993
+      },
+      {
+        "n": 7,
+        "title": "Large Language Model (LLM) Market Growth Analysis - Size and Forecast 2026-2030",
+        "url": "https://www.technavio.com/report/large-language-model-llm-market-industry-analysis",
+        "domain": "www.technavio.com",
+        "relevance": 0.8138
+      },
+      {
+        "n": 8,
+        "title": "LLM Market Share: Compare Usage & Adoption",
+        "url": "https://aimultiple.com/llm-market-share",
+        "domain": "aimultiple.com",
+        "relevance": 0.7454
+      }
+    ],
+    "metrics": {
+      "citation_density": 1.8,
+      "unique_citations": 1,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 8,
+      "n_sources_cited": 8,
+      "elapsed_s": 28.27,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 2,
+        "conflict_handling": 4,
+        "issues": "Fails to provide a direct answer to the question."
+      },
+      "uncertainty_correct": false,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  }
+]

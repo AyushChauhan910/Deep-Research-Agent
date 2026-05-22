@@ -1,0 +1,702 @@
+[
+  {
+    "id": "fact-01",
+    "type": "factual",
+    "question": "Who founded Sarvam AI and where is the company headquartered?",
+    "expected_keywords": [
+      "Vivek Raghavan",
+      "Pratyush Kumar",
+      "Bengaluru"
+    ],
+    "answer": "Sarvam AI was founded by Dr. Vivek Raghavan and Dr. Pratyush Kumar [1, 4]. The company is headquartered in Bengaluru, India [1]. \n\nSources:\n[1] Sarvam - 2026 Company Profile & Team - Tracxn (tracxn.com) - https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw\n[4] About us | Sarvam AI (www.sarvam.ai) - https://www.sarvam.ai/about-us",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Sarvam - 2026 Company Profile & Team - Tracxn",
+        "url": "https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw",
+        "domain": "tracxn.com",
+        "relevance": 2.058
+      },
+      {
+        "n": 2,
+        "title": "Sarvam - 2026 Company Profile & Team - Tracxn",
+        "url": "https://tracxn.com/d/companies/sarvam/__pdMzZ7Rkxe_acM5ctqBwOaZ9aoqOdLTKSvAsHq-7kFw",
+        "domain": "tracxn.com",
+        "relevance": 1.8571
+      },
+      {
+        "n": 3,
+        "title": "Sarvam | LinkedIn",
+        "url": "https://www.linkedin.com/company/sarvam-ai",
+        "domain": "www.linkedin.com",
+        "relevance": 0.9663
+      },
+      {
+        "n": 4,
+        "title": "About us | Sarvam AI",
+        "url": "https://www.sarvam.ai/about-us",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.8696
+      },
+      {
+        "n": 5,
+        "title": "Sarvam AI's Pratyush Kumar and Vivek Raghavan on building AI for Bharat",
+        "url": "https://www.forbesindia.com/article/ai-special-2025/sarvam-ais-pratyush-kumar-and-vivek-raghavan-on-building-ai-for-bharat/96208/1",
+        "domain": "www.forbesindia.com",
+        "relevance": 0.8696
+      },
+      {
+        "n": 6,
+        "title": "Sarvam AI's Pratyush Kumar and Vivek Raghavan on building AI for Bharat",
+        "url": "https://www.forbesindia.com/article/ai-special-2025/sarvam-ais-pratyush-kumar-and-vivek-raghavan-on-building-ai-for-bharat/96208/1",
+        "domain": "www.forbesindia.com",
+        "relevance": 0.8462
+      },
+      {
+        "n": 7,
+        "title": "Sarvam | LinkedIn",
+        "url": "https://www.linkedin.com/company/sarvam-ai",
+        "domain": "www.linkedin.com",
+        "relevance": 0.7559
+      },
+      {
+        "n": 8,
+        "title": "About us | Sarvam AI",
+        "url": "https://www.sarvam.ai/about-us",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.2
+      }
+    ],
+    "metrics": {
+      "citation_density": 6.67,
+      "unique_citations": 2,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 12.7,
+      "expresses_uncertainty": false,
+      "flags_conflict": false,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 5,
+        "issues": "none"
+      },
+      "keyword_coverage": 1.0,
+      "judge_grounded": 5,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 1
+    }
+  },
+  {
+    "id": "fact-02",
+    "type": "factual",
+    "question": "When did India's Digital Personal Data Protection Act receive presidential assent?",
+    "expected_keywords": [
+      "2023",
+      "August",
+      "DPDP"
+    ],
+    "answer": "The Digital Personal Data Protection Act received presidential assent on August 11, 2023 [6]. \n\nSources:\n[6] India Passes Privacy Law | Insights | Mayer Brown (www.mayerbrown.com)\nhttps://www.mayerbrown.com/en/insights/publications/2023/08/india-passes-privacy-law \n[8] India \u2013 Digital Personal Data Protection Act receives Presidential assent (www.aoshearman.com)\nhttps://www.aoshearman.com/en/insights/ao-shearman-on-data/india--digital-personal-data-protection-act-receives-presidential-assent",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Data Protection in India",
+        "url": "https://www.dlapiperdataprotection.com?t=law&c=IN",
+        "domain": "www.dlapiperdataprotection.com",
+        "relevance": 3.5926
+      },
+      {
+        "n": 2,
+        "title": "Data Protection in India",
+        "url": "https://www.dlapiperdataprotection.com?t=law&c=IN",
+        "domain": "www.dlapiperdataprotection.com",
+        "relevance": 3.3816
+      },
+      {
+        "n": 3,
+        "title": "India\u2019s DPDP Act 2023 & DPDP Rules 2025: A Complete Guide for Businesses - Professional Services Tailored for Businesses",
+        "url": "https://thestartupzone.in/legal-documentation/indias-dpdp-act-2023-dpdp-rules-2025-a-complete-guide-for-businesses",
+        "domain": "thestartupzone.in",
+        "relevance": 1.9245
+      },
+      {
+        "n": 4,
+        "title": "India\u2019s DPDP Act 2023 & DPDP Rules 2025: A Complete Guide for Businesses - Professional Services Tailored for Businesses",
+        "url": "https://thestartupzone.in/legal-documentation/indias-dpdp-act-2023-dpdp-rules-2025-a-complete-guide-for-businesses",
+        "domain": "thestartupzone.in",
+        "relevance": 1.6903
+      },
+      {
+        "n": 5,
+        "title": "India Passes Privacy Law | Insights | Mayer Brown",
+        "url": "https://www.mayerbrown.com/en/insights/publications/2023/08/india-passes-privacy-law",
+        "domain": "www.mayerbrown.com",
+        "relevance": 1.4741
+      },
+      {
+        "n": 6,
+        "title": "India Passes Privacy Law | Insights | Mayer Brown",
+        "url": "https://www.mayerbrown.com/en/insights/publications/2023/08/india-passes-privacy-law",
+        "domain": "www.mayerbrown.com",
+        "relevance": 1.2893
+      },
+      {
+        "n": 7,
+        "title": "DPDP Act 2023 and DPDP Rules 2025: Compliance Guide",
+        "url": "https://www.ey.com/en_in/insights/cybersecurity/decoding-the-digital-personal-data-protection-act-2023",
+        "domain": "www.ey.com",
+        "relevance": 1.2207
+      },
+      {
+        "n": 8,
+        "title": "India \u2013 Digital Personal Data Protection Act receives Presidential assent",
+        "url": "https://www.aoshearman.com/en/insights/ao-shearman-on-data/india--digital-personal-data-protection-act-receives-presidential-assent",
+        "domain": "www.aoshearman.com",
+        "relevance": 0.6111
+      }
+    ],
+    "metrics": {
+      "citation_density": 7.5,
+      "unique_citations": 2,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 22.87,
+      "expresses_uncertainty": false,
+      "flags_conflict": false,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 1,
+        "issues": "none"
+      },
+      "keyword_coverage": 0.67,
+      "judge_grounded": 5,
+      "judge_relevant": 5,
+      "judge_well_cited": 5,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 1
+    }
+  },
+  {
+    "id": "compare-01",
+    "type": "comparison",
+    "question": "Compare retrieval-augmented generation and fine-tuning for adapting LLMs to private enterprise documents.",
+    "expected_keywords": [
+      "retrieval",
+      "fine-tuning",
+      "latency",
+      "update",
+      "cost"
+    ],
+    "answer": "When adapting Large Language Models (LLMs) to private enterprise documents, two approaches can be considered: retrieval-augmented generation (RAG) and fine-tuning. RAG allows for the incorporation of the latest documents in a few minutes, without requiring fine-tuning [1]. This approach is particularly useful when data changes frequently, as it enables the model to provide up-to-date information [2]. Additionally, RAG is generally more cost-efficient than fine-tuning, as it limits resource costs by leveraging existing data and eliminating the need for extensive training stages [3].\n\nOn the other hand, fine-tuning involves retraining an LLM on a smaller, domain-specific dataset to improve its performance on specific tasks [4]. This approach is beneficial when the model needs to perform better on a particular task, such as analyzing legal or medical documents [4]. Fine-tuning also allows for personalization, enabling the model to provide responses that fit the needs or preferences of a user or organization [4]. However, fine-tuning requires significant time and compute power, and may not be suitable for models that need to handle constantly changing information [1].\n\nIn terms of performance, RAG has been shown to outperform fine-tuning, particularly for less popular or low-frequency concepts and entities [6]. RAG also reduces the risk of hallucination, as it grounds answers in real, retrieved data instead of generating information only from the model's internal knowledge [2]. However, fine-tuning can be beneficial for small LLMs, and can be used in conjunction with RAG to enhance the model's performance [7].\n\nWhen deciding between RAG and fine-tuning, it's essential to consider the specific needs of the application. RAG is preferable when data changes frequently, or when the model needs to handle a wide range of topics [5]. Fine-tuning is preferable when the model needs to perform better on a specific task, or when the data is stable and doesn't require constant updates [5].\n\nSources:\n[1] Comparing Retrieval Augmented Generation and fine-tuning (https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/rag-vs-fine-tuning.html)\n[2] RAG Vs. Fine Tuning: Which One Should You Choose? (https://www.montecarlodata.com/blog-rag-vs-fine-tuning)\n[3] RAG Vs. Fine Tuning: Which One Should You Choose? (https://www.montecarlodata.com/blog-rag-vs-fine-tuning)\n[4] Augment LLMs with RAGs or Fine-Tuning (https://learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning)\n[5] Augment LLMs with RAGs or Fine-Tuning (https://learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning)\n[6] Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge (https://arxiv.org/html/2403.01432v3)\n[7] Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge (https://arxiv.org/html/2403.01432v3)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Comparing Retrieval Augmented Generation and fine-tuning",
+        "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/rag-vs-fine-tuning.html",
+        "domain": "docs.aws.amazon.com",
+        "relevance": 2.2346
+      },
+      {
+        "n": 2,
+        "title": "RAG Vs. Fine Tuning: Which One Should You Choose?",
+        "url": "https://www.montecarlodata.com/blog-rag-vs-fine-tuning",
+        "domain": "www.montecarlodata.com",
+        "relevance": 2.0491
+      },
+      {
+        "n": 3,
+        "title": "RAG Vs. Fine Tuning: Which One Should You Choose?",
+        "url": "https://www.montecarlodata.com/blog-rag-vs-fine-tuning",
+        "domain": "www.montecarlodata.com",
+        "relevance": 1.8127
+      },
+      {
+        "n": 4,
+        "title": "Augment LLMs with RAGs or Fine-Tuning",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning",
+        "domain": "learn.microsoft.com",
+        "relevance": 1.7024
+      },
+      {
+        "n": 5,
+        "title": "Augment LLMs with RAGs or Fine-Tuning",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning",
+        "domain": "learn.microsoft.com",
+        "relevance": 1.6956
+      },
+      {
+        "n": 6,
+        "title": "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge",
+        "url": "https://arxiv.org/html/2403.01432v3",
+        "domain": "arxiv.org",
+        "relevance": 1.5762
+      },
+      {
+        "n": 7,
+        "title": "Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge",
+        "url": "https://arxiv.org/html/2403.01432v3",
+        "domain": "arxiv.org",
+        "relevance": 1.2729
+      },
+      {
+        "n": 8,
+        "title": "LLMs with retrieval-augmented generation: Good or bad for privacy compliance? | IAPP",
+        "url": "https://iapp.org/news/a/llms-with-retrieval-augmented-generation-good-or-bad-for-privacy-compliance-",
+        "domain": "iapp.org",
+        "relevance": 1.1667
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.07,
+      "unique_citations": 7,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 25.47,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 4,
+        "issues": "none"
+      },
+      "keyword_coverage": 0.8,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 3,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 2
+    }
+  },
+  {
+    "id": "compare-02",
+    "type": "comparison",
+    "question": "How do Mistral 7B and Llama 3 8B compare on reasoning benchmarks?",
+    "expected_keywords": [
+      "MMLU",
+      "reasoning",
+      "Mistral",
+      "Llama"
+    ],
+    "answer": "To compare Mistral 7B and Llama 3 8B on reasoning benchmarks, we need to examine the performance of each model on various tasks. According to [3], Llama 3 8B Lunaris has a higher intelligence benchmark and has reasoning mode, which suggests it may perform better on reasoning tasks. However, [4] reports that Qwen3 8B outperforms Llama 3.1 8B on coding and math, and Mistral 7B v0.3 is purpose-built for agentic workflows, which may indicate strong reasoning capabilities.\n\nSource [5] states that Mistral 7B outperforms Llama 2 13B on all benchmarks, but it does not provide a direct comparison with Llama 3 8B. On the other hand, [6] and [7] report the performance of Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B on various reasoning benchmarks, including GPQA, MMLU, and AlpacaEval 2.0, but do not compare it directly to Mistral 7B.\n\nGiven the available information, it is difficult to determine which model performs better on reasoning benchmarks. Llama 3 8B may have an advantage due to its higher intelligence benchmark and reasoning mode [3], but Mistral 7B's performance on agentic workflows and its ability to outperform Llama 2 13B on all benchmarks [4] and [5] suggest it may also be a strong contender.\n\nSources:\n[3] Mistral 7B Instruct v0.3 vs Llama 3 8B Lunaris - Pricing & Benchmark Comparison 2026 (pricepertoken.com)\n[4] Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026 (www.promptquorum.com)\n[5] Mistral 7B (mistral.ai)\n[6] Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Technical Report (arxiv.org)\n[7] Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Technical Report (arxiv.org)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison",
+        "url": "https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest",
+        "domain": "llm-stats.com",
+        "relevance": 4.1612
+      },
+      {
+        "n": 2,
+        "title": "Llama 3.1 8B Instruct vs Ministral 3 (8B Reasoning 2512) Comparison",
+        "url": "https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-ministral-8b-latest",
+        "domain": "llm-stats.com",
+        "relevance": 3.49
+      },
+      {
+        "n": 3,
+        "title": "Mistral 7B Instruct v0.3 vs Llama 3 8B Lunaris - Pricing & Benchmark Comparison 2026",
+        "url": "https://pricepertoken.com/compare/mistral-ai-mistral-7b-instruct-v0.3-vs-sao10k-l3-lunaris-8b",
+        "domain": "pricepertoken.com",
+        "relevance": 3.1574
+      },
+      {
+        "n": 4,
+        "title": "Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026",
+        "url": "https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral",
+        "domain": "www.promptquorum.com",
+        "relevance": 2.7408
+      },
+      {
+        "n": 5,
+        "title": "Mistral 7B",
+        "url": "https://mistral.ai/news/announcing-mistral-7b",
+        "domain": "mistral.ai",
+        "relevance": 2.4461
+      },
+      {
+        "n": 6,
+        "title": "Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Technical Report",
+        "url": "https://arxiv.org/html/2601.21051v1",
+        "domain": "arxiv.org",
+        "relevance": 2.3989
+      },
+      {
+        "n": 7,
+        "title": "Llama-3.1-FoundationAI-SecurityLLM-Reasoning-8B Technical Report",
+        "url": "https://arxiv.org/html/2601.21051v1",
+        "domain": "arxiv.org",
+        "relevance": 2.3434
+      },
+      {
+        "n": 8,
+        "title": "Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026",
+        "url": "https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral",
+        "domain": "www.promptquorum.com",
+        "relevance": 2.1291
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.42,
+      "unique_citations": 5,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 8,
+      "n_sources_cited": 8,
+      "elapsed_s": 22.12,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 3,
+        "conflict_handling": 4,
+        "issues": "The answer does not provide a clear conclusion."
+      },
+      "keyword_coverage": 1.0,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 4,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "multihop-01",
+    "type": "multi_hop",
+    "question": "What is Sarvam AI's flagship Indic LLM, and on which open model family is it built?",
+    "expected_keywords": [
+      "OpenHathi",
+      "Sarvam",
+      "Llama"
+    ],
+    "answer": "Sarvam AI's flagship Indic LLM is Sarvam-M [5]. According to the sources, Sarvam-M is a hybrid Indic LLM that has been developed by fine-tuning an open pre-trained model [5]. However, the sources do not explicitly mention which open model family Sarvam-M is built on. \n\nSource [5] provides information on the development and capabilities of Sarvam-M, including its performance on various benchmarks. On the other hand, sources [2] and [4] discuss open-source LLMs, including GPT-3, but do not provide a direct connection to Sarvam-M. \n\nTo determine which open model family Sarvam-M is built on, additional research would be necessary. The current sources do not contain enough information to answer this question confidently.\n\nSources:\n[2] Best Open Source LLM - Bagisto (https://bagisto.com/en/best-open-source-large-language-models)\n[4] Best Open Source LLM - Bagisto (https://bagisto.com/en/best-open-source-large-language-models)\n[5] Sarvam-M | Sarvam AI (https://www.sarvam.ai/blogs/sarvam-m)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Why Sarvam AI Matters for India\u2019s AI Future: Key Insights",
+        "url": "https://socialprachar.com/blog/why-sarvam-ai-matters-for-indias-ai-future-key-insights",
+        "domain": "socialprachar.com",
+        "relevance": 1.4747
+      },
+      {
+        "n": 2,
+        "title": "Best Open Source LLM - Bagisto",
+        "url": "https://bagisto.com/en/best-open-source-large-language-models/amp",
+        "domain": "bagisto.com",
+        "relevance": 1.118
+      },
+      {
+        "n": 3,
+        "title": "Why Sarvam AI Matters for India\u2019s AI Future: Key Insights",
+        "url": "https://socialprachar.com/blog/why-sarvam-ai-matters-for-indias-ai-future-key-insights",
+        "domain": "socialprachar.com",
+        "relevance": 1.0999
+      },
+      {
+        "n": 4,
+        "title": "Best Open Source LLM - Bagisto",
+        "url": "https://bagisto.com/en/best-open-source-large-language-models",
+        "domain": "bagisto.com",
+        "relevance": 0.9097
+      },
+      {
+        "n": 5,
+        "title": "Sarvam-M | Sarvam AI",
+        "url": "https://www.sarvam.ai/blogs/sarvam-m",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.8575
+      },
+      {
+        "n": 6,
+        "title": "Sarvam-M | Sarvam AI",
+        "url": "https://www.sarvam.ai/blogs/sarvam-m",
+        "domain": "www.sarvam.ai",
+        "relevance": 0.7931
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.97,
+      "unique_citations": 3,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 6,
+      "elapsed_s": 27.17,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 3,
+        "conflict_handling": 5,
+        "issues": "The answer does not fully address the question about the open model family."
+      },
+      "keyword_coverage": 0.33,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  },
+  {
+    "id": "recent-01",
+    "type": "recent",
+    "question": "What were the major updates to India's IndiaAI Mission in 2025?",
+    "expected_keywords": [
+      "IndiaAI",
+      "compute",
+      "GPU"
+    ],
+    "answer": "The IndiaAI Mission has undergone significant updates in 2025. According to [3], the mission has made progress in several areas, including the development of India's own Large Multimodal Models using Indian data and languages, with four startups selected in the first phase: Sarvam AI, Soket AI, Gnani AI, and Gan AI. Additionally, the IndiaAI Startups Global program was launched in March 2025 to help 10 Indian startups expand into the European market [3]. The mission has also achieved a significant milestone in providing affordable access to world-class AI resources, with over 38,000 GPUs on boarded, available at a subsidized rate of just \u20b965 per hour [4]. Furthermore, 30 AI applications have been approved by July 2025, with sector-specific hackathons organized to develop AI solutions for various challenges [4].\n\nSource [1] reports that the IndiaAI Mission was approved by the Union Cabinet on March 7, 2024, with an outlay of Rs 10,372 crore for the next five years. However, it does not provide specific updates on the mission's progress in 2025. Source [2] discusses the challenges and opportunities facing India's AI ecosystem but does not provide information on the specific updates to the IndiaAI Mission in 2025. Source [5] and [6] provide general information on India's AI strategy and its implications for India-U.S. relations but do not provide specific updates on the IndiaAI Mission.\n\nSources:\n[1] India And AI: Achievements, Ongoing Efforts And Future Prospects - IMPRI Impact And Policy Research Institute (www.impriindia.com) https://www.impriindia.com/insights/india-ai-ongoing-effort-futureprospect\n[2] India And AI: Achievements, Ongoing Efforts And Future Prospects - IMPRI Impact And Policy Research Institute (www.impriindia.com) https://www.impriindia.com/insights/india-ai-ongoing-effort-futureprospect\n[3] Transforming India with AI (www.pib.gov.in) https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092&reg=3&lang=2\n[4] Transforming India with AI (www.pib.gov.in) https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092&reg=3&lang=2\n[5] India\u2019s AI Strategy: Implications for India-U.S. Relations \u2014 ORF America (orfamerica.org) https://orfamerica.org/orf-america-comments/india-us-relations-ai-strategy\n[6] India\u2019s AI Strategy: Implications for India-U.S. Relations \u2014 ORF America (orfamerica.org) https://orfamerica.org/orf-america-comments/india-us-relations-ai-strategy",
+    "citations": [
+      {
+        "n": 1,
+        "title": "India And AI: Achievements, Ongoing Efforts And Future Prospects - IMPRI Impact And Policy Research Institute",
+        "url": "https://www.impriindia.com/insights/india-ai-ongoing-effort-futureprospect",
+        "domain": "www.impriindia.com",
+        "relevance": 0.9864
+      },
+      {
+        "n": 2,
+        "title": "India And AI: Achievements, Ongoing Efforts And Future Prospects - IMPRI Impact And Policy Research Institute",
+        "url": "https://www.impriindia.com/insights/india-ai-ongoing-effort-futureprospect",
+        "domain": "www.impriindia.com",
+        "relevance": 0.9636
+      },
+      {
+        "n": 3,
+        "title": "Transforming India with AI",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092&reg=3&lang=2",
+        "domain": "www.pib.gov.in",
+        "relevance": 0.5963
+      },
+      {
+        "n": 4,
+        "title": "Transforming India with AI",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092&reg=3&lang=2",
+        "domain": "www.pib.gov.in",
+        "relevance": 0.5449
+      },
+      {
+        "n": 5,
+        "title": "India\u2019s AI Strategy: Implications for India-U.S. Relations \u2014 ORF America",
+        "url": "https://orfamerica.org/orf-america-comments/india-us-relations-ai-strategy",
+        "domain": "orfamerica.org",
+        "relevance": 0.2554
+      },
+      {
+        "n": 6,
+        "title": "India\u2019s AI Strategy: Implications for India-U.S. Relations \u2014 ORF America",
+        "url": "https://orfamerica.org/orf-america-comments/india-us-relations-ai-strategy",
+        "domain": "orfamerica.org",
+        "relevance": 0.1591
+      }
+    ],
+    "metrics": {
+      "citation_density": 4.64,
+      "unique_citations": 6,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 3,
+      "n_sources_cited": 6,
+      "elapsed_s": 22.69,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 5,
+        "conflict_handling": 4,
+        "issues": "none"
+      },
+      "keyword_coverage": 0.67,
+      "judge_grounded": 4,
+      "judge_relevant": 5,
+      "judge_well_cited": 4,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 3
+    }
+  },
+  {
+    "id": "conflict-01",
+    "type": "potentially_conflicting",
+    "question": "Is GPT-4 or Claude 3.5 Sonnet better for code generation? Cite benchmark numbers.",
+    "expected_keywords": [
+      "HumanEval",
+      "SWE",
+      "benchmark"
+    ],
+    "answer": "When it comes to code generation, both GPT-4o and Claude 3.5 Sonnet have their strengths and weaknesses. According to [2], Claude 3.5 Sonnet performs better in coding and writing, producing cleaner code and more natural text with fewer revisions. Additionally, [3] reports that Claude 3.5 Sonnet solved 64% of problems in an internal agentic coding evaluation, outperforming other models. This suggests that Claude 3.5 Sonnet is preferable for coding tasks that require high-quality output and flexibility.\n\nOn the other hand, GPT-4o is better suited for real-time use cases, rapid responses, and applications requiring up-to-date information [2]. It also has an upper hand in multimodal capabilities, including speech recognition [7]. Furthermore, [8] states that GPT-4o is a practical choice for programmers handling routine coding activities, delivering consistent accuracy across general coding tasks.\n\nIn terms of specific conditions, Claude 3.5 Sonnet is preferable when flexibility, creativity, and speed are key [8], while GPT-4o is preferable for everyday, iterative coding tasks where a balance of accuracy and speed is important [8]. However, it's worth noting that Source [6] reports that Claude Sonnet 3.5 is stronger in maths, but this is based on a limited sample size.\n\nSources:\n[2] Claude 3.5 Sonnet vs GPT-4o: Complete AI Model Comparison (https://www.sentisight.ai/claude-3-5-sonnet-vs-gpt-4o-ultimate-comparison)\n[3] Claude 3.5 Sonnet vs GPT-4o: Complete AI Model Comparison (https://www.sentisight.ai/claude-3-5-sonnet-vs-gpt-4o-ultimate-comparison)\n[6] Comparison of Claude Sonnet 3.5, GPT-4o, o1, and Gemini 1.5 Pro for coding (https://www.qodo.ai/blog/comparison-of-claude-sonnet-3-5-gpt-4o-o1-and-gemini-1-5-pro-for-coding)\n[7] Claude 3.5 Sonnet vs ChatGPT-4o \u2014 Comparison | AIMLAPI (https://aimlapi.com/comparisons/claude-sonnet-3-5-vs-chatgpt-4o)\n[8] Comparison of Claude Sonnet 3.5, GPT-4o, o1, and Gemini 1.5 Pro for coding (https://www.qodo.ai/blog/comparison-of-claude-sonnet-3-5-gpt-4o-o1-and-gemini-1-5-pro-for-coding)",
+    "citations": [
+      {
+        "n": 1,
+        "title": "Best AI Models for Coding in 2026: Real-World Developer Reviews",
+        "url": "https://www.faros.ai/blog/best-ai-model-for-coding-2026",
+        "domain": "www.faros.ai",
+        "relevance": 2.4946
+      },
+      {
+        "n": 2,
+        "title": "Claude 3.5 Sonnet vs GPT-4o: Complete AI Model Comparison",
+        "url": "https://www.sentisight.ai/claude-3-5-sonnet-vs-gpt-4o-ultimate-comparison",
+        "domain": "www.sentisight.ai",
+        "relevance": 2.0956
+      },
+      {
+        "n": 3,
+        "title": "Claude 3.5 Sonnet vs GPT-4o: Complete AI Model Comparison",
+        "url": "https://www.sentisight.ai/claude-3-5-sonnet-vs-gpt-4o-ultimate-comparison",
+        "domain": "www.sentisight.ai",
+        "relevance": 2.0303
+      },
+      {
+        "n": 4,
+        "title": "Best AI Models for Coding in 2026: Real-World Developer Reviews",
+        "url": "https://www.faros.ai/blog/best-ai-model-for-coding-2026",
+        "domain": "www.faros.ai",
+        "relevance": 1.7551
+      },
+      {
+        "n": 5,
+        "title": "Claude 3.5 Sonnet vs ChatGPT-4o \u2014 Comparison | AIMLAPI",
+        "url": "https://aimlapi.com/comparisons/claude-sonnet-3-5-vs-chatgpt-4o",
+        "domain": "aimlapi.com",
+        "relevance": 1.713
+      },
+      {
+        "n": 6,
+        "title": "Comparison of Claude Sonnet 3.5, GPT-4o, o1, and Gemini 1.5 Pro for coding",
+        "url": "https://www.qodo.ai/blog/comparison-of-claude-sonnet-3-5-gpt-4o-o1-and-gemini-1-5-pro-for-coding",
+        "domain": "www.qodo.ai",
+        "relevance": 1.525
+      },
+      {
+        "n": 7,
+        "title": "Claude 3.5 Sonnet vs ChatGPT-4o \u2014 Comparison | AIMLAPI",
+        "url": "https://aimlapi.com/comparisons/claude-sonnet-3-5-vs-chatgpt-4o",
+        "domain": "aimlapi.com",
+        "relevance": 1.5212
+      },
+      {
+        "n": 8,
+        "title": "Comparison of Claude Sonnet 3.5, GPT-4o, o1, and Gemini 1.5 Pro for coding",
+        "url": "https://www.qodo.ai/blog/comparison-of-claude-sonnet-3-5-gpt-4o-o1-and-gemini-1-5-pro-for-coding",
+        "domain": "www.qodo.ai",
+        "relevance": 1.0866
+      }
+    ],
+    "metrics": {
+      "citation_density": 5.06,
+      "unique_citations": 5,
+      "source_diversity": 0.5,
+      "n_pages_fetched": 5,
+      "n_sources_cited": 8,
+      "elapsed_s": 24.39,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 4,
+        "completeness": 4,
+        "conflict_handling": 2,
+        "issues": "Lack of diverse sources and potential self-citation issue with sources [2] and [3]."
+      },
+      "keyword_coverage": 0.0,
+      "conflict_flagged": true,
+      "judge_grounded": 2,
+      "judge_relevant": 5,
+      "judge_well_cited": 3,
+      "judge_clear": 4,
+      "judge_uncertainty_calibration": 3
+    }
+  },
+  {
+    "id": "insufficient-01",
+    "type": "insufficient_evidence",
+    "question": "What will the exact market share of Indian LLM startups be in 2030?",
+    "should_express_uncertainty": true,
+    "answer": "The exact market share of Indian LLM startups in 2030 is not explicitly stated in the provided sources. However, we can find some information related to the Indian Generative AI market and the global Enterprise LLM market.\n\nAccording to [1], the India Generative AI market is expected to grow from 2019 to 2030, with various figures and tables providing insights into the market size, share, and segmentation. However, the exact market share of Indian LLM startups in 2030 is not mentioned.\n\nOn the other hand, [2] provides information on the global Enterprise LLM market, including market value forecasts by region, model type, component, deployment mode, enterprise size, and industry vertical. However, it does not specifically mention the market share of Indian LLM startups in 2030.\n\nSince the provided sources do not contain enough information to answer the question confidently, additional research would be necessary to determine the exact market share of Indian LLM startups in 2030.\n\nSources:\n[1] India Generative Ai Market (www.blueweaveconsulting.com) - https://www.blueweaveconsulting.com/report/india-generative-ai-market\n[2] Enterprise LLM Market | Global Market Analysis Report - 2036 (www.futuremarketinsights.com) - https://www.futuremarketinsights.com/reports/enterprise-llm-market",
+    "citations": [
+      {
+        "n": 1,
+        "title": "India Generative Ai Market",
+        "url": "https://www.blueweaveconsulting.com/report/india-generative-ai-market",
+        "domain": "www.blueweaveconsulting.com",
+        "relevance": 5.1419
+      },
+      {
+        "n": 2,
+        "title": "Enterprise LLM Market | Global Market Analysis Report - 2036",
+        "url": "https://www.futuremarketinsights.com/reports/enterprise-llm-market",
+        "domain": "www.futuremarketinsights.com",
+        "relevance": 4.9855
+      },
+      {
+        "n": 3,
+        "title": "Enterprise LLM Market | Global Market Analysis Report - 2036",
+        "url": "https://www.futuremarketinsights.com/reports/enterprise-llm-market",
+        "domain": "www.futuremarketinsights.com",
+        "relevance": 3.186
+      },
+      {
+        "n": 4,
+        "title": "India Generative Ai Market",
+        "url": "https://www.blueweaveconsulting.com/report/india-generative-ai-market",
+        "domain": "www.blueweaveconsulting.com",
+        "relevance": 2.0935
+      },
+      {
+        "n": 5,
+        "title": "Multilingual LLM Market Growth Analysis - Size and Forecast 2026-2030",
+        "url": "https://www.technavio.com/report/multilingual-llm-market-industry-analysis",
+        "domain": "www.technavio.com",
+        "relevance": 1.6013
+      },
+      {
+        "n": 6,
+        "title": "Data Lineage for Large Language Model (LLM) Training Market Report 2026 - Total Revenue Set to More Than Double During 2026-2030 as AI Investments and Compliance Needs Rise",
+        "url": "https://finance.yahoo.com/sectors/technology/articles/data-lineage-large-language-model-151500137.html",
+        "domain": "finance.yahoo.com",
+        "relevance": 0.9071
+      },
+      {
+        "n": 7,
+        "title": "Enterprise LLM Market Size, Share | Growth Report [2026-2034]",
+        "url": "https://www.fortunebusinessinsights.com/enterprise-llm-market-114178",
+        "domain": "www.fortunebusinessinsights.com",
+        "relevance": 0.8895
+      },
+      {
+        "n": 8,
+        "title": "Enterprise LLM Market Size, Share | Growth Report [2026-2034]",
+        "url": "https://www.fortunebusinessinsights.com/enterprise-llm-market-114178",
+        "domain": "www.fortunebusinessinsights.com",
+        "relevance": 0.8058
+      }
+    ],
+    "metrics": {
+      "citation_density": 2.23,
+      "unique_citations": 2,
+      "source_diversity": 0.62,
+      "n_pages_fetched": 8,
+      "n_sources_cited": 8,
+      "elapsed_s": 23.34,
+      "expresses_uncertainty": false,
+      "flags_conflict": true,
+      "self_critique": {
+        "grounding": 5,
+        "completeness": 2,
+        "conflict_handling": 4,
+        "issues": "Fails to provide a direct answer to the question."
+      },
+      "uncertainty_correct": false,
+      "judge_grounded": 4,
+      "judge_relevant": 3,
+      "judge_well_cited": 5,
+      "judge_clear": 5,
+      "judge_uncertainty_calibration": 5
+    }
+  }
+]
